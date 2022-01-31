@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ee85fcc8ba3e71409e71b150c2191bc",
+    "content-hash": "36fce2539559e164a4c8114e234c5320",
     "packages": [
         {
             "name": "dannyvandersluijs/exact-online-meta-data-tool",
-            "version": "dev-Allow-running-command-from-vendor-folder",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool.git",
-                "reference": "cec7aa5adc92234cdd97bbe70a6b4528608711c2"
+                "reference": "8513a59ca0f30bab29a4b846eb478ab1b67e0a57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DannyvdSluijs/exact-online-meta-data-tool/zipball/cec7aa5adc92234cdd97bbe70a6b4528608711c2",
-                "reference": "cec7aa5adc92234cdd97bbe70a6b4528608711c2",
+                "url": "https://api.github.com/repos/DannyvdSluijs/exact-online-meta-data-tool/zipball/8513a59ca0f30bab29a4b846eb478ab1b67e0a57",
+                "reference": "8513a59ca0f30bab29a4b846eb478ab1b67e0a57",
                 "shasum": ""
             },
             "require": {
@@ -58,9 +58,9 @@
             "description": "A meta data tool for the ExactOnline API documentation",
             "support": {
                 "issues": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/issues",
-                "source": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/tree/Allow-running-command-from-vendor-folder"
+                "source": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/tree/1.7.0"
             },
-            "time": "2022-01-31T18:49:59+00:00"
+            "time": "2022-01-31T20:41:28+00:00"
         },
         {
             "name": "myclabs/php-enum",
@@ -1079,9 +1079,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "dannyvandersluijs/exact-online-meta-data-tool": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
