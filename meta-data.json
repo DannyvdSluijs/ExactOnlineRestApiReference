@@ -156,6 +156,19 @@
                 "hidden": false
             },
             {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Modifier",
                 "type": "Edm.Guid",
                 "description": "User ID of modifier",
