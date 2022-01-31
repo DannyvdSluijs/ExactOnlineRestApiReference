@@ -1,0 +1,14 @@
+{
+    "name": "dannyvandersluijs/exact-online-rest-api-reference",
+    "description": "The package contains the latest JSON representation of the Exact Online REST API",
+    "license": "MIT",
+    "require": {
+        "dannyvandersluijs/exact-online-meta-data-tool": "dev-Allow-running-command-from-vendor-folder"
+    },
+    "scripts": {
+        "update-meta-data": "exact-online-meta-data-tool run"
+    },
+    "scripts-descriptions": {
+        "update-meta-data": "Scan the Exact Online API Documentation and build a new meta-data.json file"
+    }
+}

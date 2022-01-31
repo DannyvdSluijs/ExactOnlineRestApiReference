@@ -1,0 +1,43 @@
+name: Auto update
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * *'
+    - cron:  '18 19 * * *'
+  push:
+    branches:
+      - main
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Update meta data
+      run: composer run update-meta-data
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Nightly update of meta-data.json
+        title: 'Nightly update of meta-data.json'
+        add-paths: |
+          meta-data.json
+        labels: |
+          automated pr
+        assignees: dannyvdsluijs
+        reviewers: dannyvdsluijs
+
+    - name: Check outputs
+      run: |
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
