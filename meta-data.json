@@ -6508,6 +6508,19 @@
                 "hidden": false
             },
             {
+                "name": "OrderNumber",
+                "type": "Edm.Int32",
+                "description": "Order number of the linked transaction.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "PaymentCondition",
                 "type": "Edm.String",
                 "description": "Payment condition of the linked transaction.",
@@ -23554,6 +23567,19 @@
                 "name": "ModifierFullName",
                 "type": "Edm.String",
                 "description": "Name of modifier.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderNumber",
+                "type": "Edm.Int32",
+                "description": "Order number of the linked transaction.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -54965,6 +54991,45 @@
                 "hidden": false
             },
             {
+                "name": "ReasonCode",
+                "type": "Edm.String",
+                "description": "Reason code for logistics",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReasonCodeDescription",
+                "type": "Edm.String",
+                "description": "Reason code for logistics description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReasonCodeID",
+                "type": "Edm.Guid",
+                "description": "Reason code for logistics id",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "SerialNumbers",
                 "type": "SerialNumbers",
                 "description": "The collection of serial numbers that belong to the items included in this stock count",
@@ -60478,6 +60543,257 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "ReasonForLogistics": {
+        "endpoint": "ReasonForLogistics",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=LogisticsReasonForLogistics",
+        "scope": "Logistics items",
+        "uri": "\/api\/v1\/{division}\/logistics\/ReasonForLogistics",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/logistics\/ReasonForLogistics",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key.",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Active",
+                "type": "Edm.Byte",
+                "description": "Indicates if the reason code is active.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code of the reason.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of creator.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of creator.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the reason code.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Extra notes.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Types",
+                "type": "Types",
+                "description": "Collection of types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "ReasonForLogisticsLinkTypes": {
+        "endpoint": "ReasonForLogisticsLinkTypes",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=LogisticsReasonForLogisticsLinkTypes",
+        "scope": "Logistics items",
+        "uri": "\/api\/v1\/{division}\/logistics\/ReasonForLogisticsLinkTypes",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/logistics\/ReasonForLogisticsLinkTypes",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Reason",
+                "type": "Edm.Guid",
+                "description": "The reason linked to the type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Type",
+                "type": "Edm.Int16",
+                "description": "Type of the reason code.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "TypeDescription",
+                "type": "Edm.String",
+                "description": "Description of the type of the reason code.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -101503,6 +101819,32 @@
                 "hidden": false
             },
             {
+                "name": "ReturnReasonCodeDescription",
+                "type": "Edm.String",
+                "description": "Description of ReasonCode",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReturnReasonCodeID",
+                "type": "Edm.Guid",
+                "description": "Indicates the reason why the planned sales was returned",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "SalesOrderLineID",
                 "type": "Edm.Guid",
                 "description": "Sales order line of the particular item",
@@ -106236,6 +106578,19 @@
                 "name": "ModifierFullName",
                 "type": "Edm.String",
                 "description": "Name of modifier.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderNumber",
+                "type": "Edm.Int32",
+                "description": "Order number of the linked transaction.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
