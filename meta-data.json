@@ -44846,6 +44846,19 @@
                 "hidden": false
             },
             {
+                "name": "Subject",
+                "type": "Edm.String",
+                "description": "The subject of the return documet",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Type",
                 "type": "Edm.Int32",
                 "description": "Return Type (31 - VAT, 32-EC Sales list, 146-Payroll declaration)",
