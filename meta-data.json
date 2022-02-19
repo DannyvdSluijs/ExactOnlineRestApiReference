@@ -7719,6 +7719,84 @@
                 "hidden": false
             },
             {
+                "name": "IncotermAddressPurchase",
+                "type": "Edm.String",
+                "description": "Address of Incoterm for Purchase",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddressSales",
+                "type": "Edm.String",
+                "description": "Address of Incoterm for Sales",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCodePurchase",
+                "type": "Edm.String",
+                "description": "Code of Incoterm for Purchase",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCodeSales",
+                "type": "Edm.String",
+                "description": "Code of Incoterm for Sales",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersionPurchase",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm for Purchase Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersionSales",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm for Sales Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "IntraStatArea",
                 "type": "Edm.String",
                 "description": "Intrastat Area",
@@ -11077,6 +11155,45 @@
                     "post": true,
                     "put": true,
                     "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
                 },
                 "hidden": false
             },
@@ -17393,6 +17510,45 @@
                 "hidden": false
             },
             {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "InvoiceDate",
                 "type": "Edm.DateTime",
                 "description": "Official date for the invoice. When the invoice is entered it's equal to the field 'EntryDate'. During the printing process the invoice date can be entered",
@@ -20127,6 +20283,45 @@
                     "post": true,
                     "put": true,
                     "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
                 },
                 "hidden": false
             },
@@ -28328,6 +28523,84 @@
                 "hidden": false
             },
             {
+                "name": "IncotermAddressPurchase",
+                "type": "Edm.String",
+                "description": "Address of Incoterm for Purchase",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddressSales",
+                "type": "Edm.String",
+                "description": "Address of Incoterm for Sales",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCodePurchase",
+                "type": "Edm.String",
+                "description": "Code of Incoterm for Purchase",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCodeSales",
+                "type": "Edm.String",
+                "description": "Code of Incoterm for Sales",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersionPurchase",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm for Purchase Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersionSales",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm for Sales Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "IntraStatArea",
                 "type": "Edm.String",
                 "description": "Intrastat Area",
@@ -36263,6 +36536,45 @@
                 "name": "DueDate",
                 "type": "Edm.DateTime",
                 "description": "Date after which the quotation is no longer valid",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -57797,6 +58109,73 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "Incoterms": {
+        "endpoint": "Incoterms",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=LogisticsIncoterms",
+        "scope": "Crm quotes sales orders sales invoices purchase orders",
+        "uri": "\/api\/v1\/{division}\/logistics\/Incoterms",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/logistics\/Incoterms",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Int16",
+                "description": "ID of Property",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Version",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -99950,6 +100329,45 @@
                 "hidden": false
             },
             {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "InvoiceDate",
                 "type": "Edm.DateTime",
                 "description": "Official date for the invoice. When the invoice is entered it's equal to the field 'EntryDate'. During the printing process the invoice date can be entered",
@@ -103346,6 +103764,45 @@
                 "hidden": false
             },
             {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "InvoiceStatus",
                 "type": "Edm.Int16",
                 "description": "Invoice status",
@@ -104030,8 +104487,8 @@
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": true,
-                    "put": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -104044,7 +104501,7 @@
                 "supportedMethods": {
                     "get": true,
                     "post": true,
-                    "put": true,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -105171,8 +105628,8 @@
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": true,
-                    "put": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
