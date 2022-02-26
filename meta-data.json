@@ -16089,6 +16089,19 @@
                 "hidden": false
             },
             {
+                "name": "DefaultItemIsMandatory",
+                "type": "Edm.Byte",
+                "description": "To indicated if only default item is allowed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Description",
                 "type": "Edm.String",
                 "description": "Description of the project WBS",
@@ -87335,6 +87348,19 @@
                 "hidden": false
             },
             {
+                "name": "DefaultItemIsMandatory",
+                "type": "Edm.Byte",
+                "description": "To indicated if only default item is allowed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Description",
                 "type": "Edm.String",
                 "description": "Description of the project WBS",
@@ -87704,6 +87730,19 @@
                 "name": "DefaultItem",
                 "type": "Edm.Guid",
                 "description": "Default Item to used for timecost entry",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DefaultItemIsMandatory",
+                "type": "Edm.Byte",
+                "description": "To indicated if only default item is allowed",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -90703,6 +90742,19 @@
                 "name": "DefaultItem",
                 "type": "Edm.Guid",
                 "description": "Default Item to used for time entry",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DefaultItemIsMandatory",
+                "type": "Edm.Boolean",
+                "description": "To indicated if only default item is allowed",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
