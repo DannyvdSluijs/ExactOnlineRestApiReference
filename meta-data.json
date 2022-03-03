@@ -11572,7 +11572,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -11585,7 +11585,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -11598,7 +11598,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesPerson",
@@ -18040,7 +18040,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -18053,7 +18053,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -18066,7 +18066,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesOrder",
@@ -20869,7 +20869,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -20882,7 +20882,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -20895,7 +20895,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "Salesperson",
@@ -36894,7 +36894,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -36907,7 +36907,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -36920,7 +36920,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesPerson",
@@ -100716,7 +100716,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -100729,7 +100729,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -100742,7 +100742,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesInvoiceLines",
@@ -104112,7 +104112,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelCode",
@@ -104125,7 +104125,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesChannelDescription",
@@ -104138,7 +104138,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true
+                "hidden": false
             },
             {
                 "name": "SalesOrderLines",
