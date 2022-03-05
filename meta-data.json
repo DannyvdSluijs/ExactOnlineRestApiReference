@@ -82148,6 +82148,19 @@
                 "hidden": false
             },
             {
+                "name": "IntercompanyRate",
+                "type": "Edm.Double",
+                "description": "Amount of intercompany rate",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": true
+            },
+            {
                 "name": "InternalRate",
                 "type": "Edm.Double",
                 "description": "Amount of internal rate",
@@ -95377,6 +95390,45 @@
                 "name": "ExchangeRate",
                 "type": "Edm.Double",
                 "description": "The exchange rate between the invoice currency and the default currency of the division.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
