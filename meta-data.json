@@ -101112,6 +101112,725 @@
             }
         ]
     },
+    "DropShipmentLines": {
+        "endpoint": "DropShipmentLines",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SalesOrderDropShipmentLines",
+        "scope": "Logistics wms",
+        "uri": "\/api\/v1\/{division}\/salesorder\/DropShipmentLines",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": true,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/salesorder\/DropShipmentLines",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "The unique identifier of a stock transaction for a dropshipment line.",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "BatchNumbers",
+                "type": "StockBatchNumbers",
+                "description": "Collection of batch numbers",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomerItemCode",
+                "type": "Edm.String",
+                "description": "Code the customer uses for this item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryDate",
+                "type": "Edm.DateTime",
+                "description": "Date of goods delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of sales order dropshipment",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EntryID",
+                "type": "Edm.Guid",
+                "description": "The EntryID identifies the dropshipment. All the lines of a dropshipment have the same EntryID",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Item",
+                "type": "Edm.Guid",
+                "description": "Reference to item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemCode",
+                "type": "Edm.String",
+                "description": "Item code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemDescription",
+                "type": "Edm.String",
+                "description": "Description of item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "LineNumber",
+                "type": "Edm.Int32",
+                "description": "Line number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Notes",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PurchaseOrderLineID",
+                "type": "Edm.Guid",
+                "description": "Reference to purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "QuantityDelivered",
+                "type": "Edm.Double",
+                "description": "Quantity delivered",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "QuantityOrdered",
+                "type": "Edm.Double",
+                "description": "Quantity ordered",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderLineID",
+                "type": "Edm.Guid",
+                "description": "Reference to sales order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderLineNumber",
+                "type": "Edm.Int32",
+                "description": "Sales order line number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderNumber",
+                "type": "Edm.Int32",
+                "description": "Sales order number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SerialNumbers",
+                "type": "StockSerialNumbers",
+                "description": "Collection of serial numbers",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "Edm.String",
+                "description": "Reference to tracking number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Unitcode",
+                "type": "Edm.String",
+                "description": "Code of item unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "DropShipments": {
+        "endpoint": "DropShipments",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SalesOrderDropShipments",
+        "scope": "Logistics wms",
+        "uri": "\/api\/v1\/{division}\/salesorder\/DropShipments",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": true,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/salesorder\/DropShipments",
+        "properties": [
+            {
+                "name": "EntryID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccount",
+                "type": "Edm.Guid",
+                "description": "Reference to account for delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccountCode",
+                "type": "Edm.String",
+                "description": "Delivery account code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccountName",
+                "type": "Edm.String",
+                "description": "Delivery account name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAddress",
+                "type": "Edm.Guid",
+                "description": "Reference to shipping address",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryContact",
+                "type": "Edm.Guid",
+                "description": "Reference to contact for delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryContactPersonFullName",
+                "type": "Edm.String",
+                "description": "Name of the contact person of the customer who will receive delivered goods",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryDate",
+                "type": "Edm.DateTime",
+                "description": "Date of goods delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryNumber",
+                "type": "Edm.Int32",
+                "description": "Delivery number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Header description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Document",
+                "type": "Edm.Guid",
+                "description": "Document that is manually linked to the sales order delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DocumentSubject",
+                "type": "Edm.String",
+                "description": "Document Subject",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DropShipmentLines",
+                "type": "DropShipmentLines",
+                "description": "Collection of lines",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EntryNumber",
+                "type": "Edm.Int32",
+                "description": "Entry number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Remarks",
+                "type": "Edm.String",
+                "description": "Remarks",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethod",
+                "type": "Edm.Guid",
+                "description": "Reference to shipping method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodCode",
+                "type": "Edm.String",
+                "description": "Code of shipping method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodDescription",
+                "type": "Edm.String",
+                "description": "Description of shipping method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "Edm.String",
+                "description": "Reference to header tracking number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
     "GoodsDeliveries": {
         "endpoint": "GoodsDeliveries",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SalesOrderGoodsDeliveries",
@@ -107450,7 +108169,7 @@
             {
                 "name": "EntityType",
                 "type": "Edm.Int32",
-                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= SalesItemPrices 9= Items 10= PaymentTerms 11= Quotations 12= SalesOrders 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects",
+                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= SalesItemPrices 9= Items 10= PaymentTerms 11= Quotations 12= SalesOrders 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects 22= PurchaseOrders",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
