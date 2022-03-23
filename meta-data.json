@@ -48072,7 +48072,7 @@
             "get": true,
             "post": true,
             "put": false,
-            "delete": false
+            "delete": true
         },
         "example": "\/api\/v1\/{division}\/generaljournalentry\/GeneralJournalEntries",
         "properties": [
