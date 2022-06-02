@@ -7459,6 +7459,19 @@
                 "hidden": false
             },
             {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "DatevCreditorCode",
                 "type": "Edm.String",
                 "description": "DATEV creditor code for Germany legislation",
@@ -7579,6 +7592,19 @@
                 "name": "EndDate",
                 "type": "Edm.DateTime",
                 "description": "Determines in combination with the start date if the account is active. If the current date is > end date the account is inactive",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EORINumber",
+                "type": "Edm.String",
+                "description": "EORI number",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -9985,6 +10011,19 @@
                 "hidden": false
             },
             {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Division",
                 "type": "Edm.Int32",
                 "description": "Division code",
@@ -10886,6 +10925,32 @@
                 "hidden": false
             },
             {
+                "name": "AmountDiscount",
+                "type": "Edm.Double",
+                "description": "Discount amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountDiscountExclVat",
+                "type": "Edm.Double",
+                "description": "Discount amount excluding VAT in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "AmountFC",
                 "type": "Edm.Double",
                 "description": "Amount in the currency of the transaction",
@@ -11458,6 +11523,32 @@
                 "hidden": false
             },
             {
+                "name": "PaymentCondition",
+                "type": "Edm.String",
+                "description": "Payment condition code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentConditionDescription",
+                "type": "Edm.String",
+                "description": "Payment condition description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Project",
                 "type": "Edm.Guid",
                 "description": "The project linked to the quotation",
@@ -11622,6 +11713,32 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethod",
+                "type": "Edm.Guid",
+                "description": "Shipping method ID",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodDescription",
+                "type": "Edm.String",
+                "description": "Shipping method description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -12328,6 +12445,19 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProposedEntryStatus",
+                "type": "Edm.Int16",
+                "description": "ProposedEntryStatus, 0 = Void, 5 = Rejected, 20 = Open, 50 = Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -14525,6 +14655,19 @@
                 "hidden": false
             },
             {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Description",
                 "type": "Edm.String",
                 "description": "Description of the item",
@@ -15934,48 +16077,22 @@
     },
     "Project\/ProjectWBS": {
         "endpoint": "Project\/ProjectWBS",
-        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=BulkProjectProjectWBS",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncProjectProjectWBS",
         "scope": "Projects projects",
-        "uri": "\/api\/v1\/{division}\/bulk\/Project\/ProjectWBS",
+        "uri": "\/api\/v1\/{division}\/sync\/Project\/ProjectWBS",
         "supportedMethods": {
             "get": true,
             "post": false,
             "put": false,
             "delete": false
         },
-        "example": "\/api\/v1\/{division}\/bulk\/Project\/ProjectWBS",
+        "example": "\/api\/v1\/{division}\/sync\/Project\/ProjectWBS",
         "properties": [
             {
-                "name": "ID",
-                "type": "Edm.Guid",
-                "description": "Primary key",
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
                 "primaryKey": true,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": true
-                },
-                "hidden": false
-            },
-            {
-                "name": "AdditionalInvoicing",
-                "type": "Edm.Byte",
-                "description": "A boolean field to indicated if additional invoice is allowed on this WBS",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "BaselineDate",
-                "type": "Edm.DateTime",
-                "description": "Baseline date of this deliverable",
-                "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
                     "post": true,
@@ -15986,7 +16103,7 @@
             },
             {
                 "name": "BlockEntry",
-                "type": "Edm.Boolean",
+                "type": "Edm.Byte",
                 "description": "A boolean field to indicated if time and cost entries is blocked",
                 "primaryKey": false,
                 "supportedMethods": {
@@ -15999,8 +16116,47 @@
             },
             {
                 "name": "BlockRebilling",
-                "type": "Edm.Boolean",
-                "description": "A boolean field to indicated if rebilling is blocked",
+                "type": "Edm.Byte",
+                "description": "A boolean field to indicated if rebilling is blocked. Only for expense",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BudgetedCost",
+                "type": "Edm.Double",
+                "description": "Budget cost of the WBS activity and expense",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BudgetedHours",
+                "type": "Edm.Double",
+                "description": "Budget hours of the WBS. Only for activity",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BudgetedRevenue",
+                "type": "Edm.Double",
+                "description": "Revenue of the WBS. Only for activity and expense",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16013,7 +16169,7 @@
             {
                 "name": "BudgetOverrunHours",
                 "type": "Edm.Byte",
-                "description": "BudgetOverrunHours: 10-Allowed, 20-Not Allowed",
+                "description": "BudgetOverrunHours: 10-Allowed, 20-Not Allowed. Only for activity",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16026,20 +16182,7 @@
             {
                 "name": "Completed",
                 "type": "Edm.Byte",
-                "description": "A boolean field to indicated if the project WBS is completed",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Cost",
-                "type": "Edm.Double",
-                "description": "Budget cost of the WBS",
+                "description": "A boolean field to indicated if the project WBS deliverable is completed.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16052,12 +16195,12 @@
             {
                 "name": "Created",
                 "type": "Edm.DateTime",
-                "description": "Date and time the project was created",
+                "description": "The date and time when the WBS was created",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": false,
-                    "put": false,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -16065,12 +16208,25 @@
             {
                 "name": "Creator",
                 "type": "Edm.Guid",
-                "description": "The Guid ID of user that created the project",
+                "description": "The ID of the user that created the WBS",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": false,
-                    "put": false,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "The full name of the user that created the WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -16078,7 +16234,7 @@
             {
                 "name": "DefaultItem",
                 "type": "Edm.Guid",
-                "description": "Default Item to used for timecost entry",
+                "description": "Default item to used for time entries",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16091,7 +16247,7 @@
             {
                 "name": "DefaultItemIsMandatory",
                 "type": "Edm.Byte",
-                "description": "To indicated if only default item is allowed",
+                "description": "To indicated if only default item is allowed. Only for activity",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16121,8 +16277,8 @@
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": false,
-                    "put": false,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -16141,9 +16297,22 @@
                 "hidden": false
             },
             {
-                "name": "Hours",
-                "type": "Edm.Double",
-                "description": "Budget quantity of the WBS",
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceSeparately",
+                "type": "Edm.Byte",
+                "description": "To indicated if additional invoice is allowed on this WBS. Additional invoice can only be set when the project type is fixed price or prepaid and the project allow additional invoices. Only for activity and expense",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16154,9 +16323,9 @@
                 "hidden": false
             },
             {
-                "name": "IsBaseline",
-                "type": "Edm.Byte",
-                "description": "A boolean field to indicated if this is a baseline",
+                "name": "MarkupPercentage",
+                "type": "Edm.Double",
+                "description": "Markup percentage for WBS expense",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16169,7 +16338,7 @@
             {
                 "name": "Milestone",
                 "type": "Edm.Byte",
-                "description": "A boolean field to indicated if this is a milestone",
+                "description": "To indicated if this is a milestone for WBS deliverable",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16186,8 +16355,8 @@
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": false,
-                    "put": false,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -16199,8 +16368,21 @@
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
-                    "post": false,
-                    "put": false,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "The full name of the user that modified the WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false
@@ -16219,9 +16401,22 @@
                 "hidden": false
             },
             {
-                "name": "Parent",
+                "name": "PartOf",
                 "type": "Edm.Guid",
                 "description": "ID of the parent WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PartOfDescription",
+                "type": "Edm.String",
+                "description": "Description of part of",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16245,9 +16440,22 @@
                 "hidden": false
             },
             {
+                "name": "ProjectDescription",
+                "type": "Edm.String",
+                "description": "Description of the project that linked to WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "ProjectTerm",
                 "type": "Edm.Guid",
-                "description": "ID of invoice planning",
+                "description": "ID of invoice term that linked to the WBS deliverable. Invoice term can only be linked when the project is using billing milestones and the deliverable is set as a milestone",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16258,22 +16466,9 @@
                 "hidden": false
             },
             {
-                "name": "PurchaseMarkupPercentage",
-                "type": "Edm.Double",
-                "description": "Markup percentage",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Revenue",
-                "type": "Edm.Double",
-                "description": "Revenue of the WBS",
+                "name": "ProjectTermDescription",
+                "type": "Edm.String",
+                "description": "Description of invoice term that linked to the WBS deliverable",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16286,7 +16481,7 @@
             {
                 "name": "SequenceNumber",
                 "type": "Edm.Int32",
-                "description": "Sequence Number",
+                "description": "Sequence number of the WBS. Last sequence will be selected if not specified",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -16312,7 +16507,7 @@
             {
                 "name": "TimeQuantityToAlert",
                 "type": "Edm.Double",
-                "description": "Alert when exceeding this time quantity",
+                "description": "Alert when exceeding this time quantity for WBS activity",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -28328,6 +28523,19 @@
                 "hidden": false
             },
             {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "DatevCreditorCode",
                 "type": "Edm.String",
                 "description": "DATEV creditor code for Germany legislation",
@@ -28448,6 +28656,19 @@
                 "name": "EndDate",
                 "type": "Edm.DateTime",
                 "description": "Determines in combination with the start date if the account is active. If the current date is > end date the account is inactive",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EORINumber",
+                "type": "Edm.String",
+                "description": "EORI number",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -31248,6 +31469,19 @@
                 "hidden": false
             },
             {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Division",
                 "type": "Edm.Int32",
                 "description": "Division code",
@@ -32929,6 +33163,19 @@
                 "hidden": false
             },
             {
+                "name": "ProposedEntryStatus",
+                "type": "Edm.Int16",
+                "description": "ProposedEntryStatus, 0 = Void, 5 = Rejected, 20 = Open, 50 = Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "SalesInvoiceNumber",
                 "type": "Edm.Int32",
                 "description": "'Our reference' of the transaction that belongs to this document",
@@ -33883,6 +34130,114 @@
             }
         ]
     },
+    "LeadPurposes": {
+        "endpoint": "LeadPurposes",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CRMLeadPurposes",
+        "scope": "Crm accounts",
+        "uri": "\/api\/v1\/{division}\/crm\/LeadPurposes",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/crm\/LeadPurposes",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "LeadSources": {
+        "endpoint": "LeadSources",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CRMLeadSources",
+        "scope": "Crm accounts",
+        "uri": "\/api\/v1\/{division}\/crm\/LeadSources",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/crm\/LeadSources",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
     "Opportunities": {
         "endpoint": "Opportunities",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CRMOpportunities",
@@ -34092,6 +34447,32 @@
                 "hidden": false
             },
             {
+                "name": "Contact",
+                "type": "Edm.Guid",
+                "description": "Contact ID of main contact person",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ContactFullName",
+                "type": "Edm.String",
+                "description": "Name of the main contact person",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Created",
                 "type": "Edm.DateTime",
                 "description": "Creation date",
@@ -34139,6 +34520,19 @@
                     "get": true,
                     "post": true,
                     "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -34890,6 +35284,19 @@
                 "name": "CreatorFullName",
                 "type": "Edm.String",
                 "description": "Name of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -36364,6 +36771,32 @@
                 "hidden": false
             },
             {
+                "name": "AmountDiscount",
+                "type": "Edm.Double",
+                "description": "Discount Amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountDiscountExclVat",
+                "type": "Edm.Double",
+                "description": "Discount Amount excluding VAT in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "AmountFC",
                 "type": "Edm.Double",
                 "description": "Amount in the currency of the transaction",
@@ -36832,6 +37265,32 @@
                 "hidden": false
             },
             {
+                "name": "PaymentCondition",
+                "type": "Edm.String",
+                "description": "Payment condition code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentConditionDescription",
+                "type": "Edm.String",
+                "description": "Payment condition description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Project",
                 "type": "Edm.Guid",
                 "description": "The project linked to the quotation",
@@ -37017,6 +37476,32 @@
                 "name": "SelectionCodeDescription",
                 "type": "Edm.String",
                 "description": "Description of selection code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethod",
+                "type": "Edm.Guid",
+                "description": "Shipping method ID",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodDescription",
+                "type": "Edm.String",
+                "description": "Shipping method description",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -37584,6 +38069,140 @@
                 "name": "SuccessMessage",
                 "type": "Edm.String",
                 "description": "Contains information if the quotation was successfully reviewed.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "CustomFields": {
+        "endpoint": "CustomFields",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CustomFieldCustomFields",
+        "scope": "Organization extensibility",
+        "uri": "\/api\/v1\/{division}\/customfield\/CustomFields",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/customfield\/CustomFields",
+        "properties": [
+            {
+                "name": "LinkId",
+                "type": "Edm.Guid",
+                "description": "Entity id",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BusinessComponentName",
+                "type": "Edm.String",
+                "description": "Business component name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PropertyName",
+                "type": "Edm.String",
+                "description": "Custom business property name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Value",
+                "type": "Edm.String",
+                "description": "Custom field data",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "UpdateCustomField": {
+        "endpoint": "UpdateCustomField",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CustomFieldUpdateCustomField",
+        "scope": "Organization extensibility",
+        "uri": "\/api\/v1\/{division}\/customfield\/UpdateCustomField",
+        "supportedMethods": {
+            "get": false,
+            "post": true,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/customfield\/UpdateCustomField",
+        "properties": [
+            {
+                "name": "LinkId",
+                "type": "Edm.Guid",
+                "description": "Entity id",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BusinessComponentName",
+                "type": "Edm.String",
+                "description": "Business component name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PropertyName",
+                "type": "Edm.String",
+                "description": "Custom business property name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Value",
+                "type": "Edm.String",
+                "description": "Custom field data",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -59563,6 +60182,19 @@
                 "name": "CreatorFullName",
                 "type": "Edm.String",
                 "description": "Name of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -83645,6 +84277,32 @@
                 "hidden": false
             },
             {
+                "name": "InvoiceId",
+                "type": "Edm.Guid",
+                "description": "ID of sales invoice",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceStatus",
+                "type": "Edm.Int16",
+                "description": "The invoice status of the invoice term. E.g: 10 = Draft, 20 = Open, 30 = Processing..., 50 = Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "Item",
                 "type": "Edm.Guid",
                 "description": "Item that linked to the invoice term",
@@ -83791,6 +84449,19 @@
                 "name": "VATPercentage",
                 "type": "Edm.Double",
                 "description": "Percentage of VAT code that used in the invoice term",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "WBS",
+                "type": "Edm.Guid",
+                "description": "ID of WBS that linked to the invoice term",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -86566,6 +87237,19 @@
                 "hidden": false
             },
             {
+                "name": "AllowMemberEntryOnly",
+                "type": "Edm.Boolean",
+                "description": "Allow only member to create time or cost entry",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": true
+            },
+            {
                 "name": "BlockEntry",
                 "type": "Edm.Boolean",
                 "description": "Block time and cost entries",
@@ -86795,6 +87479,19 @@
                     "get": true,
                     "post": true,
                     "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -87465,6 +88162,19 @@
                 "hidden": false
             },
             {
+                "name": "InvoiceMethod",
+                "type": "Edm.Int16",
+                "description": "The invoice method of the WBS. E.g: 2 = Fixed price, 3 = Time and Material, 4 = Non billable, 5 = Prepaid",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "IsBaseline",
                 "type": "Edm.Byte",
                 "description": "A boolean field to indicated if this is a baseline",
@@ -87558,7 +88268,7 @@
             {
                 "name": "ProjectTerm",
                 "type": "Edm.Guid",
-                "description": "ID of invoice planning",
+                "description": "ID of the invoice term that linked to the WBS",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -87857,6 +88567,19 @@
                 "hidden": false
             },
             {
+                "name": "InvoiceMethod",
+                "type": "Edm.Int16",
+                "description": "The invoice method of the WBS. E.g: 2 = Fixed price, 3 = Time and Material, 4 = Non billable, 5 = Prepaid",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "IsBaseline",
                 "type": "Edm.Byte",
                 "description": "A boolean field to indicated if this is a baseline",
@@ -87950,7 +88673,7 @@
             {
                 "name": "ProjectTerm",
                 "type": "Edm.Guid",
-                "description": "ID of invoice planning",
+                "description": "ID of the invoice term that linked to the WBS",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -90856,6 +91579,19 @@
                 "hidden": false
             },
             {
+                "name": "InvoiceMethod",
+                "type": "Edm.Int16",
+                "description": "The invoice method of the WBS. E.g: 2 = Fixed price, 3 = Time and Material, 4 = Non billable, 5 = Prepaid",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
                 "name": "InvoiceSeparately",
                 "type": "Edm.Boolean",
                 "description": "To indicated if additional invoice is allowed on this WBS expense. Additional invoice can only be set when the project type is fixed price or prepaid and the project allow additional invoices.",
@@ -90864,6 +91600,19 @@
                     "get": true,
                     "post": true,
                     "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceTerm",
+                "type": "Edm.Guid",
+                "description": "ID of the invoice term that linked to the WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -96852,6 +97601,177 @@
                 "name": "Notes",
                 "type": "Edm.String",
                 "description": "Explanation or extra information can be stored in the notes",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "SalesChannels": {
+        "endpoint": "SalesChannels",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SalesSalesChannels",
+        "scope": "Crm quotes sales orders sales invoices",
+        "uri": "\/api\/v1\/{division}\/sales\/SalesChannels",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": true,
+            "delete": true
+        },
+        "example": "\/api\/v1\/{division}\/sales\/SalesChannels",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Active",
+                "type": "Edm.Boolean",
+                "description": "Active",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code of the sales channel",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of sales channel",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Notes",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -107075,7 +107995,7 @@
             {
                 "name": "InvoiceDay",
                 "type": "Edm.Byte",
-                "description": "The day number of the month when the invoice of the subscription is sent",
+                "description": "For monthly, quaterly, half-year and yearly invoice period, the day number of the month when the invoice of the subscription is sent. While for weekly invoice period, the weekday number of the week when the invoice of the subscription is sent: 0=Monday 1=Tuesday 2=Wednesday 3=Thursday 4=Friday 5=Saturday 6=Sunday",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -108940,7 +109860,7 @@
             {
                 "name": "EntityType",
                 "type": "Edm.Int32",
-                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= SalesItemPrices 9= Items 10= PaymentTerms 11= Quotations 12= SalesOrders 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects 22= PurchaseOrders",
+                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= SalesItemPrices 9= Items 10= PaymentTerms 11= Quotations 12= SalesOrders 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects 22= PurchaseOrders 23= Subscriptions 24= SubscriptionLines 25= ProjectWBS 26= ProjectPlanning",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -109777,6 +110697,476 @@
             }
         ]
     },
+    "Project\/ProjectPlanning": {
+        "endpoint": "Project\/ProjectPlanning",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncProjectProjectPlanning",
+        "scope": "Projects projects",
+        "uri": "\/api\/v1\/{division}\/sync\/Project\/ProjectPlanning",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/sync\/Project\/ProjectPlanning",
+        "properties": [
+            {
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Account",
+                "type": "Edm.Guid",
+                "description": "Account linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AccountCode",
+                "type": "Edm.String",
+                "description": "Account code linked to project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AccountName",
+                "type": "Edm.String",
+                "description": "Account name linked to project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BGTStatus",
+                "type": "Edm.Int16",
+                "description": "Status of the background task for project planning, 1 = To be processed, 2 = Processed, 3 = Failed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CommunicationErrorStatus",
+                "type": "Edm.Int16",
+                "description": "Status of the external calender linked to project planning, 0 = No error, 1 = Credentials error, 2 = Technical error, 3 = Both credentials & technical errors, 4 = In progress",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Date and time the record was created",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "The GUID ID of the user that created the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "The full name of the user that created the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "The description of the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "The code of the company that the record is stored in",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Employee",
+                "type": "Edm.Guid",
+                "description": "The GUID ID of the employee that is linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EmployeeCode",
+                "type": "Edm.String",
+                "description": "The code of the employee that is linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EmployeeHID",
+                "type": "Edm.Int32",
+                "description": "The numeric ID of the employee that is linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EndDate",
+                "type": "Edm.DateTime",
+                "description": "The end date of the project planning, this is to indicate when the planning ends. E.g: End of a project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Hours",
+                "type": "Edm.Double",
+                "description": "Hours planned for the employee",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "HourType",
+                "type": "Edm.Guid",
+                "description": "The type of hours entered for the project planning, item with 'Time' type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "HourTypeCode",
+                "type": "Edm.String",
+                "description": "The code of the item with 'Time' type that is used in project planning, can be used for searching for hour type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "HourTypeDescription",
+                "type": "Edm.String",
+                "description": "The description of the item with 'Time' type that is used in project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "IsBrokenRecurrence",
+                "type": "Edm.Boolean",
+                "description": "Indicates whether the project planning is separated from the recurring planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Date the project planning record was modified",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "The ID of the user that modified the project planning records",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "The full name of the user that modified the project planning record",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Additional information on this project planning record",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OverAllocate",
+                "type": "Edm.Boolean",
+                "description": "Indicates whether the entries can have over allocated planning hours",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Project",
+                "type": "Edm.Guid",
+                "description": "Project ID that is linked to the planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectCode",
+                "type": "Edm.String",
+                "description": "Project code that is linked to the planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectDescription",
+                "type": "Edm.String",
+                "description": "Project description that is linked to the planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectPlanningRecurring",
+                "type": "Edm.Guid",
+                "description": "Recurring planning linked to project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectWBS",
+                "type": "Edm.Guid",
+                "description": "Referenced project work break down structure ID that is linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectWBSDescription",
+                "type": "Edm.String",
+                "description": "Referenced project work break down structure description that is linked to the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "StartDate",
+                "type": "Edm.DateTime",
+                "description": "Start date of the project planning",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Status",
+                "type": "Edm.Int16",
+                "description": "Status of the project planning, 1 = Reserved, 2 = Planned",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Type",
+                "type": "Edm.Int16",
+                "description": "Type of project planning, it will always be 4 for employee",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
     "Project\/Projects": {
         "endpoint": "Project\/Projects",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncProjectProjects",
@@ -109867,6 +111257,19 @@
                     "delete": false
                 },
                 "hidden": false
+            },
+            {
+                "name": "AllowMemberEntryOnly",
+                "type": "Edm.Boolean",
+                "description": "Allow only member to create time or cost entry",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": true
             },
             {
                 "name": "BlockEntry",
@@ -110085,6 +111488,19 @@
                     "get": true,
                     "post": true,
                     "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomField",
+                "type": "Edm.String",
+                "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -111062,6 +112478,2209 @@
                     "get": true,
                     "post": true,
                     "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "PurchaseOrder\/PurchaseOrders": {
+        "endpoint": "PurchaseOrder\/PurchaseOrders",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncPurchaseOrderPurchaseOrders",
+        "scope": "Purchase orders",
+        "uri": "\/api\/v1\/{division}\/sync\/PurchaseOrder\/PurchaseOrders",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/sync\/PurchaseOrder\/PurchaseOrders",
+        "properties": [
+            {
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountDC",
+                "type": "Edm.Double",
+                "description": "Amount in the default currency of the company",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountFC",
+                "type": "Edm.Double",
+                "description": "Amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostCenter",
+                "type": "Edm.Guid",
+                "description": "Reference to Cost center",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostCenterCode",
+                "type": "Edm.String",
+                "description": "Code of Cost Center (user-defined ID)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostCenterDescription",
+                "type": "Edm.String",
+                "description": "Description of Cost Center",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostUnit",
+                "type": "Edm.Guid",
+                "description": "Reference to Cost Unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostUnitCode",
+                "type": "Edm.String",
+                "description": "Code of Cost Unit (user-defined ID)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CostUnitDescription",
+                "type": "Edm.String",
+                "description": "Description of Cost Unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Currency",
+                "type": "Edm.String",
+                "description": "Currency code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccount",
+                "type": "Edm.Guid",
+                "description": "Reference to account for delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccountCode",
+                "type": "Edm.String",
+                "description": "Delivery account code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAccountName",
+                "type": "Edm.String",
+                "description": "Account name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryAddress",
+                "type": "Edm.Guid",
+                "description": "Reference to shipping address",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryContact",
+                "type": "Edm.Guid",
+                "description": "Reference to contact for delivery",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DeliveryContactPersonFullName",
+                "type": "Edm.String",
+                "description": "Name of the contact person of the customer who will receive delivered goods",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Discount",
+                "type": "Edm.Double",
+                "description": "Discount in percentage for item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Document",
+                "type": "Edm.Guid",
+                "description": "Document that is manually linked to the purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DocumentNumber",
+                "type": "Edm.Int32",
+                "description": "Number of the document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DocumentSubject",
+                "type": "Edm.String",
+                "description": "Subject of the document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "DropShipment",
+                "type": "Edm.Boolean",
+                "description": "Shows if it is a drop shipment purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ExchangeRate",
+                "type": "Edm.Double",
+                "description": "The exchange rate between the invoice currency and the default currency of the division.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Expense",
+                "type": "Edm.Guid",
+                "description": "Expense related to the Work Breakdown Structure of the selected project. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ExpenseDescription",
+                "type": "Edm.String",
+                "description": "Description of expense. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermAddress",
+                "type": "Edm.String",
+                "description": "Address of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermCode",
+                "type": "Edm.String",
+                "description": "Code of Incoterm",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IncotermVersion",
+                "type": "Edm.Int16",
+                "description": "Version of Incoterm Supported version for Incoterms : 2010, 2020",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoicedQuantity",
+                "type": "Edm.Double",
+                "description": "Quantity of item that has been invoiced",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceStatus",
+                "type": "Edm.Int32",
+                "description": "Invoice status of purchase order: 10-Open, 20-Partial, 30-Complete, 40-Canceled",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IsBatchNumberItem",
+                "type": "Edm.Byte",
+                "description": "Indicates that an Item is an batch item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IsSerialNumberItem",
+                "type": "Edm.Byte",
+                "description": "Indicates that an Item is an serial item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Item",
+                "type": "Edm.Guid",
+                "description": "Reference to the item for purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemBarcode",
+                "type": "Edm.String",
+                "description": "Barcode of the item (numeric string)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemCode",
+                "type": "Edm.String",
+                "description": "Item code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemDescription",
+                "type": "Edm.String",
+                "description": "Description of item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemDivisable",
+                "type": "Edm.Boolean",
+                "description": "Indicates if fractional quantities of the item can be used, for example quantity = 0.4",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "LineNumber",
+                "type": "Edm.Int32",
+                "description": "Line number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "NetPrice",
+                "type": "Edm.Double",
+                "description": "The net price is the unit price (VAT code taken into account) with any discount applied",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Notes",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderDate",
+                "type": "Edm.DateTime",
+                "description": "Order date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderNumber",
+                "type": "Edm.Int32",
+                "description": "Human readable id of the purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderStatus",
+                "type": "Edm.Int32",
+                "description": "Purchase order status: 10-Open, 20-Partial, 30-Complete, 40-Canceled",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentCondition",
+                "type": "Edm.String",
+                "description": "The payment condition code used for due date and discount calculation",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentConditionDescription",
+                "type": "Edm.String",
+                "description": "Description of payment condition",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Project",
+                "type": "Edm.Guid",
+                "description": "Reference to project. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectCode",
+                "type": "Edm.String",
+                "description": "Project code. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ProjectDescription",
+                "type": "Edm.String",
+                "description": "Description of the project. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PurchaseAgent",
+                "type": "Edm.Guid",
+                "description": "Purchase agent",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PurchaseAgentFullName",
+                "type": "Edm.String",
+                "description": "Name of purchase agent",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PurchaseOrderID",
+                "type": "Edm.Guid",
+                "description": "The Purchase OrderID identifies the purchase order. All the lines of a purchase order have the same Purchase Order ID",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Quantity in item units",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "QuantityInPurchaseUnits",
+                "type": "Edm.Double",
+                "description": "Quantity in purchase units. Use this field when creating a purchase order",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Rebill",
+                "type": "Edm.Boolean",
+                "description": "Indicates whether the purchase order line needs to be rebilled. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReceiptDate",
+                "type": "Edm.DateTime",
+                "description": "This field shows the date the goods are expected to be received.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReceiptStatus",
+                "type": "Edm.Int32",
+                "description": "Receipt status of purchase order: 10-Open, 20-Partial, 30-Complete, 40-Canceled",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReceivedQuantity",
+                "type": "Edm.Double",
+                "description": "Quantity of goods received",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Remarks",
+                "type": "Edm.String",
+                "description": "Include any relevant remarks regarding the purchase order.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrder",
+                "type": "Edm.Guid",
+                "description": "Reference to sales order when purchase order generated via back to back sales order. Show NULL if more than one sales order is linked to the purchase order.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderLine",
+                "type": "Edm.Guid",
+                "description": "Sales order line of the sales order that Is linked to a back to back sales order in purchase order. Show NULL if more than one sales order is linked to the purchase order line.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderLineNumber",
+                "type": "Edm.Int32",
+                "description": "Number of the sales order line. Show NULL if more than one sales order is linked to the purchase order line.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SalesOrderNumber",
+                "type": "Edm.Int32",
+                "description": "Number of the sales order. Show NULL if more than one sales order is linked to the purchase order line.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SelectionCode",
+                "type": "Edm.Guid",
+                "description": "ID of selection code. Only supported by the Advanced and Premium editions for Wholesale & Distribution and Manufacturing",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SelectionCodeCode",
+                "type": "Edm.String",
+                "description": "Code of selection code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SelectionCodeDescription",
+                "type": "Edm.String",
+                "description": "Description of selection code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SendingMethod",
+                "type": "Edm.Int32",
+                "description": "SendingMethod",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethod",
+                "type": "Edm.Guid",
+                "description": "Shipping Method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodCode",
+                "type": "Edm.String",
+                "description": "Code of Shipping Method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ShippingMethodDescription",
+                "type": "Edm.String",
+                "description": "Description of Shipping Method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Source",
+                "type": "Edm.Int16",
+                "description": "This shows how the purchase order was created: 1-Manual entry, 2-Import, 3-Other, 4-Purchase order, 5-Sales order, 6-Supplier's items, 7-Subcontract, 8-Purchase order advice, 9-Shop order, 10-MRP calculation, 11-Rest API, 12-Merge purchase orders",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Supplier",
+                "type": "Edm.Guid",
+                "description": "Reference to supplier account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierCode",
+                "type": "Edm.String",
+                "description": "Code of supplier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierContact",
+                "type": "Edm.Guid",
+                "description": "Contact of supplier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierContactPersonFullName",
+                "type": "Edm.String",
+                "description": "Contact person full name of supplier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierItemCode",
+                "type": "Edm.String",
+                "description": "Code the supplier uses for this item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierItemCopyRemarks",
+                "type": "Edm.Byte",
+                "description": "Indicate if the notes content should be copied from SupplierItem's remarks. The default follows the CopyRemarks value from SupplierItem. Values: 0 = Do not copy remark, 1 = Copy remark",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SupplierName",
+                "type": "Edm.String",
+                "description": "Name of supplier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Unit",
+                "type": "Edm.String",
+                "description": "Code of item unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "UnitDescription",
+                "type": "Edm.String",
+                "description": "Description of unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "UnitPrice",
+                "type": "Edm.Double",
+                "description": "Item price per purchase unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATAmount",
+                "type": "Edm.Double",
+                "description": "Total VAT amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATCode",
+                "type": "Edm.String",
+                "description": "The VAT code used when the invoice was registered",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATDescription",
+                "type": "Edm.String",
+                "description": "Description of vat code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATPercentage",
+                "type": "Edm.Double",
+                "description": "The VAT percentage of the VAT code. This is the percentage at the moment the invoice is created. It's also used by the default calculation of VAT amounts and VAT base amounts",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Warehouse",
+                "type": "Edm.Guid",
+                "description": "Warehouse",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "WarehouseCode",
+                "type": "Edm.String",
+                "description": "Code of Warehouse",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "WarehouseDescription",
+                "type": "Edm.String",
+                "description": "Description of Warehouse",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "YourRef",
+                "type": "Edm.String",
+                "description": "The reference number of the customer",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "Subscription\/SubscriptionLines": {
+        "endpoint": "Subscription\/SubscriptionLines",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncSubscriptionSubscriptionLines",
+        "scope": "Sales contracts",
+        "uri": "\/api\/v1\/{division}\/sync\/Subscription\/SubscriptionLines",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/sync\/Subscription\/SubscriptionLines",
+        "properties": [
+            {
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountDC",
+                "type": "Edm.Double",
+                "description": "Amount in the default currency of the company",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "AmountFC",
+                "type": "Edm.Double",
+                "description": "Amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Costcenter",
+                "type": "Edm.String",
+                "description": "Cost center linked to the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Costunit",
+                "type": "Edm.String",
+                "description": "Cost unit linked to the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Discount",
+                "type": "Edm.Double",
+                "description": "Discount percentage of the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Code of division the subscription line is made",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EntryID",
+                "type": "Edm.Guid",
+                "description": "Entry ID referencing to the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "FromDate",
+                "type": "Edm.DateTime",
+                "description": "The date which the subscription line starts",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": true
+                },
+                "hidden": false
+            },
+            {
+                "name": "Item",
+                "type": "Edm.Guid",
+                "description": "The item that is used by the subscription line for sales details. Reference to Item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ItemDescription",
+                "type": "Edm.String",
+                "description": "Description of Item used by the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "LineNumber",
+                "type": "Edm.Int32",
+                "description": "Line number of the subscription line per subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "LineType",
+                "type": "Edm.Int16",
+                "description": "Reference to LineType endpoint",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "LineTypeDescription",
+                "type": "Edm.String",
+                "description": "Description of LineType",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Date and time when the subscription line has been modified",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "NetPrice",
+                "type": "Edm.Double",
+                "description": "Net price in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "To add or retrieve additional information in the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Quantity of item used in the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SubscriptionNumber",
+                "type": "Edm.Int32",
+                "description": "Subscription number of the subscription line per subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ToDate",
+                "type": "Edm.DateTime",
+                "description": "The date the subscription line ends",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "UnitCode",
+                "type": "Edm.String",
+                "description": "The code of the unit used in the subscription line. E.g: kg, meter",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "UnitDescription",
+                "type": "Edm.String",
+                "description": "Description of Unit used in the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "UnitPrice",
+                "type": "Edm.Double",
+                "description": "Unit price in the currency of the transaction (price * unit factor)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATAmountFC",
+                "type": "Edm.Double",
+                "description": "Vat Amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATCode",
+                "type": "Edm.String",
+                "description": "VAT code that is used in the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "VATCodeDescription",
+                "type": "Edm.String",
+                "description": "Description of VAT code that is used in the subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            }
+        ]
+    },
+    "Subscription\/Subscriptions": {
+        "endpoint": "Subscription\/Subscriptions",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncSubscriptionSubscriptions",
+        "scope": "Sales contracts",
+        "uri": "\/api\/v1\/{division}\/sync\/Subscription\/Subscriptions",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/sync\/Subscription\/Subscriptions",
+        "properties": [
+            {
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "BlockEntry",
+                "type": "Edm.Boolean",
+                "description": "Indicates if subscription is blocked for time cost entry",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CancellationDate",
+                "type": "Edm.DateTime",
+                "description": "Date of cancellation",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Classification",
+                "type": "Edm.Guid",
+                "description": "Guid ID of classification, to filter the report based on the classification of a subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ClassificationCode",
+                "type": "Edm.String",
+                "description": "Code of classification, to filter the report based on the classification of a subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ClassificationDescription",
+                "type": "Edm.String",
+                "description": "Description of classification, to filter the report based on the classification of a subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Date when the subscription was created",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "The Guid ID of the user that created the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "The full name of the user that created the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Currency",
+                "type": "Edm.String",
+                "description": "Currency code used in the transactions",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "CustomerPONumber",
+                "type": "Edm.String",
+                "description": "Purchase order number of that is linked to customer",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division number of the company that the subscription is linked to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EndDate",
+                "type": "Edm.DateTime",
+                "description": "The date and time when the subscription ends",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "EntryID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceDay",
+                "type": "Edm.Byte",
+                "description": "For monthly, quaterly, half-year and yearly invoice period, the day number of the month when the invoice of the subscription is sent. While for weekly invoice period, the weekday number of the week when the invoice of the subscription is sent: 0=Monday 1=Tuesday 2=Wednesday 3=Thursday 4=Friday 5=Saturday 6=Sunday",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoicedTo",
+                "type": "Edm.DateTime",
+                "description": "The date when the invoice of the subscription is sent",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceTo",
+                "type": "Edm.Guid",
+                "description": "The account which the subsciption is invoiced to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceToContactPerson",
+                "type": "Edm.Guid",
+                "description": "The ID of the contact person that is linked to the account the subscription is invoice to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceToContactPersonFullName",
+                "type": "Edm.String",
+                "description": "The name of the contact person that is linked to the account the subscription is invoice to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoiceToName",
+                "type": "Edm.String",
+                "description": "Name of the account to invoice to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "InvoicingStartDate",
+                "type": "Edm.DateTime",
+                "description": "Date to start invoicing the account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Date and time when the subscription has been modified",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "The ID of the user that modified the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "The name of the user that modified the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "For additional information regarding the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Number",
+                "type": "Edm.Int32",
+                "description": "Subscription number of the company",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderedBy",
+                "type": "Edm.Guid",
+                "description": "Reference to order account, GUID ID of the subscriber",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderedByContactPerson",
+                "type": "Edm.Guid",
+                "description": "Reference of contact person of order account, displays the contact name of the subscriber",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderedByContactPersonFullName",
+                "type": "Edm.String",
+                "description": "Name of contact person of order account, displays the full contact name of the subscriber",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "OrderedByName",
+                "type": "Edm.String",
+                "description": "Name of order account, displays the name of the subscriber",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentCondition",
+                "type": "Edm.String",
+                "description": "Code of subscriptions payment condition",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "PaymentConditionDescription",
+                "type": "Edm.String",
+                "description": "Description of subscriptions payment condition",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Printed",
+                "type": "Edm.Boolean",
+                "description": "Indicates if subscription has been printed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "Project",
+                "type": "Edm.Guid",
+                "description": "The Guid ID of the project, reference to Project endpoint",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReasonCancelled",
+                "type": "Edm.Guid",
+                "description": "Guid ID of the reason of cancellation record linked to the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReasonCancelledCode",
+                "type": "Edm.String",
+                "description": "Code of the reason of cancellation record linked to the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "ReasonCancelledDescription",
+                "type": "Edm.String",
+                "description": "Description of the reason of cancellation record linked to the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "StartDate",
+                "type": "Edm.DateTime",
+                "description": "Start date of the subscription",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SubscriptionType",
+                "type": "Edm.Guid",
+                "description": "The GUID ID of the subscription condition, reference to SubscriptionType endpoint",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SubscriptionTypeCode",
+                "type": "Edm.String",
+                "description": "The code of the subscription condition record",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "SubscriptionTypeDescription",
+                "type": "Edm.String",
+                "description": "The code of the subscription condition description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
                     "delete": false
                 },
                 "hidden": false
@@ -113108,6 +116727,19 @@
                 "name": "IsClientUser",
                 "type": "Edm.Boolean",
                 "description": "Client user of an accountant: either a portal user or a non-accountant user with his own license (internal use)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false
+            },
+            {
+                "name": "IsMyFirmLiteUser",
+                "type": "Edm.Boolean",
+                "description": "MyFirm lite user of accountant with limited access and specific start page (internal use)",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -115189,177 +118821,6 @@
                 "name": "UserTypeCode",
                 "type": "Edm.String",
                 "description": "User type code",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            }
-        ]
-    },
-    "SalesChannels": {
-        "endpoint": "SalesChannels",
-        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SalesSalesChannels",
-        "scope": "Crm quotes sales orders sales invoices",
-        "uri": "\/api\/v1\/{division}\/sales\/SalesChannels",
-        "supportedMethods": {
-            "get": true,
-            "post": true,
-            "put": true,
-            "delete": true
-        },
-        "example": "\/api\/v1\/{division}\/sales\/SalesChannels",
-        "properties": [
-            {
-                "name": "ID",
-                "type": "Edm.Guid",
-                "description": "Primary key",
-                "primaryKey": true,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": true
-                },
-                "hidden": false
-            },
-            {
-                "name": "Active",
-                "type": "Edm.Boolean",
-                "description": "Active",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Code",
-                "type": "Edm.String",
-                "description": "Code of the sales channel",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Created",
-                "type": "Edm.DateTime",
-                "description": "Creation date",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Creator",
-                "type": "Edm.Guid",
-                "description": "User ID of creator",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "CreatorFullName",
-                "type": "Edm.String",
-                "description": "Name of creator",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Description",
-                "type": "Edm.String",
-                "description": "Description of sales channel",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Division",
-                "type": "Edm.Int32",
-                "description": "Division code",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Modified",
-                "type": "Edm.DateTime",
-                "description": "Last modified date",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Modifier",
-                "type": "Edm.Guid",
-                "description": "User ID of modifier",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "ModifierFullName",
-                "type": "Edm.String",
-                "description": "Name of modifier",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": false,
-                    "put": false,
-                    "delete": false
-                },
-                "hidden": false
-            },
-            {
-                "name": "Notes",
-                "type": "Edm.String",
-                "description": "Notes",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
