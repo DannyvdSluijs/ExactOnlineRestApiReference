@@ -22,10 +22,16 @@ jobs:
     - name: Update meta data
       run: composer run update-meta-data
 
+    - name: Get current date
+      id: date
+      run: |
+        echo "{date}={$(date +'%Y-%m-%d')}" >> $GITHUB_STATE
+
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
+      uses: peter-evans/create-pull-request@v5
       with:
-        commit-message: Nightly update of meta-data.json
+        branch: auto-update-${{ env.date }}
+        commit-message: Auto update of meta-data.json
         title: 'Nightly update of meta-data.json'
         add-paths: |
           meta-data.json
