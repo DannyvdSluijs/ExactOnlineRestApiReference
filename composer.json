@@ -3,7 +3,7 @@
     "description": "The package contains the latest JSON representation of the Exact Online REST API",
     "license": "MIT",
     "require": {
-        "dannyvandersluijs/exact-online-meta-data-tool": "^1.10"
+        "dannyvandersluijs/exact-online-meta-data-tool": "^2.0"
     },
     "scripts": {
         "update-meta-data": "exact-online-meta-data-tool run"
