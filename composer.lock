@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92447d16babe193bbca9a9ce6b9d4c84",
-    "packages": [
+    "content-hash": "74c818d3c0d7c792f80a1aae4011a1ee",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "dannyvandersluijs/exact-online-meta-data-tool",
             "version": "2.0.0",
@@ -1077,7 +1078,6 @@
             "time": "2022-01-02T09:55:41+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
