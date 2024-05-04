@@ -9,16 +9,16 @@
     "packages-dev": [
         {
             "name": "dannyvandersluijs/exact-online-meta-data-tool",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool.git",
-                "reference": "910700bf4a3684e94a4e48e0c3caad38579678fd"
+                "reference": "ad286e90e2188210a7188493d1b3d57d9de2cf2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DannyvdSluijs/exact-online-meta-data-tool/zipball/910700bf4a3684e94a4e48e0c3caad38579678fd",
-                "reference": "910700bf4a3684e94a4e48e0c3caad38579678fd",
+                "url": "https://api.github.com/repos/DannyvdSluijs/exact-online-meta-data-tool/zipball/ad286e90e2188210a7188493d1b3d57d9de2cf2e",
+                "reference": "ad286e90e2188210a7188493d1b3d57d9de2cf2e",
                 "shasum": ""
             },
             "require": {
@@ -32,11 +32,11 @@
                 "fakerphp/faker": "^1.23",
                 "guzzlehttp/guzzle": "^6.5 || ^7.0",
                 "php-coveralls/php-coveralls": "^2.7",
-                "phpcsstandards/php_codesniffer": "^3.7",
                 "phpstan/phpstan": "^1.10",
                 "phpstan/phpstan-strict-rules": "^1.5",
                 "phpunit/phpunit": "^9.6",
-                "rector/rector": "^0.18.12"
+                "rector/rector": "^0.18.12",
+                "squizlabs/php_codesniffer": "^3.8"
             },
             "bin": [
                 "exact-online-meta-data-tool"
@@ -60,9 +60,9 @@
             "description": "A meta data tool for the ExactOnline API documentation",
             "support": {
                 "issues": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/issues",
-                "source": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/tree/2.0.0"
+                "source": "https://github.com/DannyvdSluijs/exact-online-meta-data-tool/tree/2.1.0"
             },
-            "time": "2023-12-12T08:48:59+00:00"
+            "time": "2024-05-04T19:36:41+00:00"
         },
         {
             "name": "myclabs/php-enum",
