@@ -9,6 +9,6 @@
         "update-meta-data": "Scan the Exact Online API Documentation and build a new meta-data.json file"
     },
     "require-dev": {
-        "dannyvandersluijs/exact-online-meta-data-tool": "^2.0"
+        "dannyvandersluijs/exact-online-meta-data-tool": "^4.0"
     }
 }
