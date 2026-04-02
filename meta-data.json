@@ -1355,6 +1355,316 @@
         ],
         "deprecated": false
     },
+    "\/api\/v1\/{division}\/activities\/AnnualStatements": {
+        "endpoint": "AnnualStatements",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=ActivitiesAnnualStatements",
+        "scope": "Organization workflow",
+        "uri": "\/api\/v1\/{division}\/activities\/AnnualStatements",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": true,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/activities\/AnnualStatements",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "The Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ActionDate",
+                "type": "Edm.DateTime",
+                "description": "The date indicating by when the action has to be taken",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AnnualStatementStatus",
+                "type": "Edm.String",
+                "description": "The status of the Annual Statement request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AnnualStatementStatusRemark",
+                "type": "Edm.String",
+                "description": "The remark of the Annual Statement request status",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssignedTo",
+                "type": "Edm.Guid",
+                "description": "The user that the request is assigned to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssignedToFullName",
+                "type": "Edm.String",
+                "description": "The user name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "The description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "The division",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "HID",
+                "type": "Edm.Int32",
+                "description": "The human readable key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Message",
+                "type": "Edm.String",
+                "description": "The message content of the Annual Statement request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of the last modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of the last modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MyFirmUserEmail",
+                "type": "Edm.String",
+                "description": "The email of MyFirm user",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Status",
+                "type": "Edm.Int32",
+                "description": "Status: 0 = Void, 5 = Rejected, 10 = Draft, 20 = Open, 30 = Approved, 40 = Realized, 50 = Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "StatusDescription",
+                "type": "Edm.String",
+                "description": "The description of the status",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Type",
+                "type": "Edm.String",
+                "description": "The message content of the Annual Statement request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Url",
+                "type": "Edm.String",
+                "description": "The URL back to Annual Statement",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
     "\/api\/v1\/{division}\/activities\/CommunicationNotes": {
         "endpoint": "CommunicationNotes",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=ActivitiesCommunicationNotes",
@@ -2529,6 +2839,316 @@
                     "get": true,
                     "post": true,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
+    "\/api\/v1\/{division}\/activities\/Fiscals": {
+        "endpoint": "Fiscals",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=ActivitiesFiscals",
+        "scope": "Organization workflow",
+        "uri": "\/api\/v1\/{division}\/activities\/Fiscals",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": true,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/activities\/Fiscals",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "The Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ActionDate",
+                "type": "Edm.DateTime",
+                "description": "The date indicating by when the action has to be taken",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssignedTo",
+                "type": "Edm.Guid",
+                "description": "The user that the request is assigned to",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssignedToFullName",
+                "type": "Edm.String",
+                "description": "The user name",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of the creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "The description",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "The division",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FiscalStatus",
+                "type": "Edm.String",
+                "description": "The status of the Fiscal request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FiscalStatusRemark",
+                "type": "Edm.String",
+                "description": "The remark of the Fiscal request status",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "HID",
+                "type": "Edm.Int32",
+                "description": "The human readable key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Message",
+                "type": "Edm.String",
+                "description": "The message content of the Fiscal request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of the last modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of the last modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MyFirmUserEmail",
+                "type": "Edm.String",
+                "description": "The email of MyFirm user",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Status",
+                "type": "Edm.Int32",
+                "description": "Status: 0 = Void, 5 = Rejected, 10 = Draft, 20 = Open, 30 = Approved, 40 = Realized, 50 = Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "StatusDescription",
+                "type": "Edm.String",
+                "description": "The description of the status",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Type",
+                "type": "Edm.String",
+                "description": "The message content of the Fiscal request",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Url",
+                "type": "Edm.String",
+                "description": "The URL back to Fiscal",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false,
@@ -20664,6 +21284,20 @@
                 "name": "ShippingMethodDescription",
                 "type": "Edm.String",
                 "description": "Description of shipping method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ShippingMethodExternalReference",
+                "type": "Edm.Int16",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -41019,20 +41653,6 @@
                 "mandatory": false
             },
             {
-                "name": "ExpenseLines",
-                "type": "ExpenseLines",
-                "description": "Expense lines for Receipt expenses (split amounts)",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false,
-                "mandatory": false
-            },
-            {
                 "name": "ExpenseNumber",
                 "type": "Edm.Int32",
                 "description": "Expense number - auto-generated",
@@ -41349,20 +41969,6 @@
                     "get": true,
                     "post": false,
                     "put": false,
-                    "delete": false
-                },
-                "hidden": false,
-                "mandatory": false
-            },
-            {
-                "name": "Waypoints",
-                "type": "Waypoints",
-                "description": "Waypoints for Mileage expenses (route tracking)",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
                     "delete": false
                 },
                 "hidden": false,
@@ -104985,6 +105591,20 @@
                 "mandatory": false
             },
             {
+                "name": "From",
+                "type": "Edm.DateTime",
+                "description": "The date which the purchase invoice line starts",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "InvoiceID",
                 "type": "Edm.Guid",
                 "description": "The unique identifier of the purchase invoice this line belongs to.",
@@ -105156,6 +105776,20 @@
                 "name": "Rebill",
                 "type": "Edm.Boolean",
                 "description": "Indicates whether the purchase invoice line needs to be rebilled. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "To",
+                "type": "Edm.DateTime",
+                "description": "The date which the purchase invoice line ends",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -107023,7 +107657,7 @@
             {
                 "name": "VATNonDeductiblePercentage",
                 "type": "Edm.Double",
-                "description": "If not the full amount of the VAT is deductible, you can indicate a percentage for the non decuctible part. This is used during the entry of purchase invoices.",
+                "description": "If not the full amount of the VAT is deductible, you can indicate a percentage for the non deductible part. This is used during the entry of purchase invoices.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -108175,6 +108809,20 @@
                 "mandatory": false
             },
             {
+                "name": "From",
+                "type": "Edm.DateTime",
+                "description": "The date which the purchase order line starts",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "InStock",
                 "type": "Edm.Double",
                 "description": "The current stock level of items shown in stock unit. The information is displayed only for items with the stock property selected.",
@@ -108729,6 +109377,20 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "To",
+                "type": "Edm.DateTime",
+                "description": "The date which the purchase order line ends",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false,
@@ -118123,6 +118785,20 @@
                 "mandatory": false
             },
             {
+                "name": "ShippingMethodExternalReference",
+                "type": "Edm.Int16",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "TrackingNumber",
                 "type": "Edm.String",
                 "description": "Reference to header tracking number",
@@ -121458,6 +122134,20 @@
                 "name": "SelectionCodeDescription",
                 "type": "Edm.String",
                 "description": "Description of selection code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ServicePoint",
+                "type": "Edm.String",
+                "description": "Service point for delivery. Only supported for Ecommerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -130753,7 +131443,7 @@
             {
                 "name": "EntityType",
                 "type": "Edm.Int32",
-                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= ItemPrices 9= Items 10= PaymentTerms 12= SalesOrders (This entity is going to be removed. Please refer to the new entity SalesOrderHeaders, SalesOrderLines.) 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects 22= PurchaseOrders 23= Subscriptions 24= SubscriptionLines 25= ProjectWBS 26= ProjectPlanning 27= LeaveAbsenceHoursByDay 28= SerialBatchNumbers 29= StockSerialBatchNumbers 30= ItemAccounts 31= DiscountTables 32= SalesOrderHeaders 33= SalesOrderLines 34= QuotationHeaders 35= QuotationLines 36= ShopOrders 37= ShopOrderMaterialPlans 38= ShopOrderRoutingStepPlans 39= Schedules 40= ScheduleEntries 41= ItemStorageLocations 42= Employees 43= Employments 44= EmploymentContracts 45= EmploymentOrganizations 46= EmploymentCLAs 47= EmploymentSalaries 48= BankAccounts 49= EmploymentTaxAuthoritiesGeneral 50= ShopOrderPurchasePlanning 51= ShopOrderSubOrders 53= RequirementIssues 54= BillOfMaterialMaterials 55= BillOfMaterialVersions 56= LeaveRegistrations 57= LeaveBuildUpRegistrations 58= AbsenceRegistrationTransactions 59= AbsenceRegistrations",
+                "description": "Entity Types: 1= TransactionLines 2= Accounts 3= Addresses 4= Attachments 5= Contacts 6= Documents 7= GLAccounts 8= ItemPrices 9= Items 10= PaymentTerms 12= SalesOrders (This entity is going to be removed. Please refer to the new entity SalesOrderHeaders, SalesOrderLines.) 13= SalesInvoices 14= TimeCostTransactions 15= StockPositions 16= GoodsDeliveries 17= GoodsDeliveryLines 18= GLClassifications 19= ItemWarehouses 20= StorageLocationStockPositions 21= Projects 22= PurchaseOrders 23= Subscriptions 24= SubscriptionLines 25= ProjectWBS 26= ProjectPlanning 27= LeaveAbsenceHoursByDay 28= SerialBatchNumbers 29= StockSerialBatchNumbers 30= ItemAccounts 31= DiscountTables 32= SalesOrderHeaders 33= SalesOrderLines 34= QuotationHeaders 35= QuotationLines 36= ShopOrders 37= ShopOrderMaterialPlans 38= ShopOrderRoutingStepPlans 39= Schedules 40= ScheduleEntries 41= ItemStorageLocations 42= Employees 43= Employments 44= EmploymentContracts 45= EmploymentOrganizations 46= EmploymentCLAs 47= EmploymentSalaries 48= BankAccounts 49= EmploymentTaxAuthoritiesGeneral 50= ShopOrderPurchasePlanning 51= ShopOrderSubOrders 53= RequirementIssues 54= BillOfMaterialMaterials 55= BillOfMaterialVersions 56= LeaveRegistrations 57= LeaveBuildUpRegistrations 58= AbsenceRegistrationTransactions 59= AbsenceRegistrations 60= PurchaseEntries 61= PurchaseEntryLines 62= SalesEntries 63= SalesEntryLines",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -154744,6 +155434,20 @@
                 "name": "ShippingMethodDescription",
                 "type": "Edm.String",
                 "description": "Description of shipping method",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ShippingMethodExternalReference",
+                "type": "Edm.Int16",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
