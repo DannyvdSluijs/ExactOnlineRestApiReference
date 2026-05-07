@@ -8721,6 +8721,34 @@
                 "mandatory": false
             },
             {
+                "name": "ClientGroup",
+                "type": "Edm.Guid",
+                "description": "ID of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientGroupDescription",
+                "type": "Edm.String",
+                "description": "Description of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Code",
                 "type": "Edm.String",
                 "description": "Unique key, fixed length numeric string with leading spaces, length 18. IMPORTANT: When you use OData $filter on this field you have to make sure the filter parameter contains the leading spaces",
@@ -21297,7 +21325,7 @@
             {
                 "name": "ShippingMethodExternalReference",
                 "type": "Edm.Int16",
-                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Exact Online E-commerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -28668,6 +28696,34 @@
                 "name": "ClassificationDescription",
                 "type": "Edm.String",
                 "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientGroup",
+                "type": "Edm.Guid",
+                "description": "ID of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientGroupDescription",
+                "type": "Edm.String",
+                "description": "Description of the client group",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -41301,20 +41357,6 @@
                 "mandatory": false
             },
             {
-                "name": "Notes",
-                "type": "Edm.String",
-                "description": "Notes on the expense report",
-                "primaryKey": false,
-                "supportedMethods": {
-                    "get": true,
-                    "post": true,
-                    "put": true,
-                    "delete": false
-                },
-                "hidden": false,
-                "mandatory": false
-            },
-            {
                 "name": "RejectedDate",
                 "type": "Edm.DateTime",
                 "description": "Date when the expense report was rejected",
@@ -41653,6 +41695,20 @@
                 "mandatory": false
             },
             {
+                "name": "ExpenseLines",
+                "type": "ExpenseLines",
+                "description": "Expense lines for Receipt expenses (split amounts)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "ExpenseNumber",
                 "type": "Edm.Int32",
                 "description": "Expense number - auto-generated",
@@ -41969,6 +42025,20 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Waypoints",
+                "type": "Waypoints",
+                "description": "Waypoints for Mileage expenses (route tracking)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false,
@@ -118787,7 +118857,7 @@
             {
                 "name": "ShippingMethodExternalReference",
                 "type": "Edm.Int16",
-                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Exact Online E-commerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -122147,7 +122217,7 @@
             {
                 "name": "ServicePoint",
                 "type": "Edm.String",
-                "description": "Service point for delivery. Only supported for Ecommerce",
+                "description": "Service point for delivery. Only supported for Exact Online E-commerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -126156,6 +126226,34 @@
                 "name": "ClassificationDescription",
                 "type": "Edm.String",
                 "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientGroup",
+                "type": "Edm.Guid",
+                "description": "ID of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientGroupDescription",
+                "type": "Edm.String",
+                "description": "Description of the client group",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -155447,7 +155545,7 @@
             {
                 "name": "ShippingMethodExternalReference",
                 "type": "Edm.Int16",
-                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Ecommerce",
+                "description": "External Reference of shipping method. 10=DHL, 20=PostNL, 999=Other. Only supported for Exact Online E-commerce",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
