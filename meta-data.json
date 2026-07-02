@@ -451,6 +451,136 @@
         ],
         "deprecated": false
     },
+    "\/api\/v1\/{division}\/accountancy\/ClientGroups": {
+        "endpoint": "ClientGroups",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=AccountancyClientGroups",
+        "scope": "Accountancy practicemanagement",
+        "uri": "\/api\/v1\/{division}\/accountancy\/ClientGroups",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/accountancy\/ClientGroups",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "ID of the client group",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ClientMainGroupID",
+                "type": "Edm.Guid",
+                "description": "ID of the client main group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the client group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
+    "\/api\/v1\/{division}\/accountancy\/ClientMainGroups": {
+        "endpoint": "ClientMainGroups",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=AccountancyClientMainGroups",
+        "scope": "Accountancy practicemanagement",
+        "uri": "\/api\/v1\/{division}\/accountancy\/ClientMainGroups",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/accountancy\/ClientMainGroups",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "ID of the client main group",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Code",
+                "type": "Edm.String",
+                "description": "Code of the client main group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the client main group",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
     "\/api\/v1\/{division}\/accountancy\/InvolvedUserRoles": {
         "endpoint": "InvolvedUserRoles",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=AccountancyInvolvedUserRoles",
@@ -34437,7 +34567,7 @@
             {
                 "name": "ProjectCode",
                 "type": "Edm.String",
-                "description": "The code of the project that will be created. Mandatory for Action = 3.",
+                "description": "The code of the project that will be created. Required for Action = 3. Note: ProjectCode is not mandatory in PSA packages. If no ProjectCode is provided, project auto number will be used, but this can only be applied to PSA packages.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -39549,7 +39679,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, GLAccount, ShopOrder and Subscription",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder and Subscription",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -39663,7 +39793,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, GLAccount, ShopOrder and Subscription",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder and Subscription",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
