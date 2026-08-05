@@ -6985,6 +6985,20 @@
                 "mandatory": false
             },
             {
+                "name": "PaymentDateProposal",
+                "type": "Edm.DateTime",
+                "description": "Payment date proposal.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "PaymentDays",
                 "type": "Edm.Int32",
                 "description": "Number of days between invoice date and due date.",
@@ -14449,6 +14463,20 @@
                 "mandatory": false
             },
             {
+                "name": "IsMarkAsPaidEditable",
+                "type": "Edm.Boolean",
+                "description": "Is MarkAsPaid editable",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Item",
                 "type": "Edm.Guid",
                 "description": "The item linked to the document",
@@ -14494,6 +14522,20 @@
                 "name": "Language",
                 "type": "Edm.String",
                 "description": "The language code of the document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MarkAsPaid",
+                "type": "Edm.Boolean",
+                "description": "Mark as paid",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -23985,6 +24027,332 @@
         ],
         "deprecated": false
     },
+    "\/api\/v1\/{division}\/cashflow\/BankStatementUploadAttachments": {
+        "endpoint": "BankStatementUploadAttachments",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CashflowBankStatementUploadAttachments",
+        "scope": "Financial cashflow",
+        "uri": "\/api\/v1\/{division}\/cashflow\/BankStatementUploadAttachments",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/cashflow\/BankStatementUploadAttachments",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Attachment",
+                "type": "Edm.Binary",
+                "description": "Contains the attachment(Format: Base64 encoded)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            },
+            {
+                "name": "Document",
+                "type": "Edm.Guid",
+                "description": "Reference to the Document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            },
+            {
+                "name": "FileName",
+                "type": "Edm.String",
+                "description": "Filename of the attachment",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            },
+            {
+                "name": "FileSize",
+                "type": "Edm.Double",
+                "description": "File size of the attachment",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Url",
+                "type": "Edm.String",
+                "description": "Url of the attachment. To get the file in its original format (xml, jpg, pdf, etc.) append &Download=1 to the url.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
+    "\/api\/v1\/{division}\/cashflow\/BankStatementUploads": {
+        "endpoint": "BankStatementUploads",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CashflowBankStatementUploads",
+        "scope": "Financial cashflow",
+        "uri": "\/api\/v1\/{division}\/cashflow\/BankStatementUploads",
+        "supportedMethods": {
+            "get": true,
+            "post": true,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/cashflow\/BankStatementUploads",
+        "properties": [
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "The primary key of the bank statement upload.",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Attachments",
+                "type": "BankStatementUploadAttachments",
+                "description": "Collection of attachments associated with the bank statement upload.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Bank",
+                "type": "Edm.Guid",
+                "description": "Bank for which the bank statement is uploaded.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BankAccount",
+                "type": "Edm.String",
+                "description": "Bank account for which the bank statement is uploaded.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BankStatementDocument",
+                "type": "Edm.Guid",
+                "description": "Reference to document with bank statement upload",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Country",
+                "type": "Edm.String",
+                "description": "The country associated with the bank statement upload.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "The date and time on which the bank statement was created.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "The user ID of the uploader of the bank statement.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Currency",
+                "type": "Edm.String",
+                "description": "The currency associated with the bank statement upload.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "The description associated with the bank statement upload.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "The division associated with the bank statement upload.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "The date and time the uploaded bank statement was last modified.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "The ID of the user that last modified the uploaded bank statement.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "UploadStatus",
+                "type": "Edm.Int16",
+                "description": "The status of bank statement upload.0 - Unknown, 5 - Rejected, 20 - Open, 25 - Prepared, 42 - In Process, 50 - Processed",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "UploadType",
+                "type": "Edm.Int16",
+                "description": "The type of bank statement upload.1000 - CODA",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            }
+        ],
+        "deprecated": false
+    },
     "\/api\/v1\/{division}\/cashflow\/DirectDebitMandates": {
         "endpoint": "DirectDebitMandates",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=CashflowDirectDebitMandates",
@@ -25252,6 +25620,20 @@
                 "name": "PaymentConditionDescription",
                 "type": "Edm.String",
                 "description": "Description of the payment condition.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "PaymentDateProposal",
+                "type": "Edm.DateTime",
+                "description": "Payment date proposal.",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -39679,7 +40061,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder and Subscription",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription and VATCode",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -39793,7 +40175,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder and Subscription",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription and VATCode",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -40667,6 +41049,20 @@
                 "mandatory": false
             },
             {
+                "name": "IsMarkAsPaidEditable",
+                "type": "Edm.Boolean",
+                "description": "Is MarkAsPaid editable",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Item",
                 "type": "Edm.Guid",
                 "description": "The item linked to the document",
@@ -40712,6 +41108,20 @@
                 "name": "Language",
                 "type": "Edm.String",
                 "description": "The language code of the document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MarkAsPaid",
+                "type": "Edm.Boolean",
+                "description": "Mark as paid",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -131431,6 +131841,20 @@
                 "mandatory": false
             },
             {
+                "name": "IsMarkAsPaidEditable",
+                "type": "Edm.Boolean",
+                "description": "Is MarkAsPaid editable",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Item",
                 "type": "Edm.Guid",
                 "description": "The item linked to the document",
@@ -131504,6 +131928,20 @@
                 "name": "Language",
                 "type": "Edm.String",
                 "description": "The language code of the document",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MarkAsPaid",
+                "type": "Edm.Boolean",
+                "description": "Mark as paid",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -132739,6 +133177,20 @@
                 "mandatory": false
             },
             {
+                "name": "AccountCode",
+                "type": "Edm.String",
+                "description": "Code of the Account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "AmountDC",
                 "type": "Edm.Double",
                 "description": "Amount in the default currency of the company",
@@ -132767,9 +133219,135 @@
                 "mandatory": false
             },
             {
+                "name": "AmountVATBaseFC",
+                "type": "Edm.Double",
+                "description": "Vat base amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AmountVATFC",
+                "type": "Edm.Double",
+                "description": "Vat amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Asset",
+                "type": "Edm.Guid",
+                "description": "Reference to asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssetCode",
+                "type": "Edm.String",
+                "description": "Code of Asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssetDescription",
+                "type": "Edm.String",
+                "description": "Description of Asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "BatchNumber",
                 "type": "Edm.Int32",
                 "description": "The number of the batch of entries. Normally a batch consists of multiple entries. Batchnumbers are filled for invoices created by: - Fixed entries - Prolongation (only available with module hosting)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostCenter",
+                "type": "Edm.String",
+                "description": "Reference to cost center",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostCenterDescription",
+                "type": "Edm.String",
+                "description": "Description of CostCenter",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostUnit",
+                "type": "Edm.String",
+                "description": "Reference to cost unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostUnitDescription",
+                "type": "Edm.String",
+                "description": "Description of CostUnit",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -132951,7 +133529,7 @@
             {
                 "name": "EntryID",
                 "type": "Edm.Guid",
-                "description": "Primary key",
+                "description": "The transaction lines that make up a financial entry share the same EntryID",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -132966,6 +133544,20 @@
                 "name": "EntryNumber",
                 "type": "Edm.Int32",
                 "description": "Entry number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ExchangeRate",
+                "type": "Edm.Double",
+                "description": "Exchange rate",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133005,6 +133597,62 @@
                 "mandatory": false
             },
             {
+                "name": "ExtraDutyAmountFC",
+                "type": "Edm.Double",
+                "description": "Extra duty amount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ExtraDutyPercentage",
+                "type": "Edm.Double",
+                "description": "Extra duty percentage",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FinancialPeriod",
+                "type": "Edm.Int16",
+                "description": "Financial period",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FinancialYear",
+                "type": "Edm.Int16",
+                "description": "Financial year",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "GAccountAmountFC",
                 "type": "Edm.Double",
                 "description": "A positive value of the amount indicates that the amount is to be paid to the suppliers G bank account.In case of a credit invoice the amount should have negative value when retrieved or posted to Exact.",
@@ -133019,9 +133667,107 @@
                 "mandatory": false
             },
             {
+                "name": "GLAccount",
+                "type": "Edm.Guid",
+                "description": "General ledger account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "GLAccountCode",
+                "type": "Edm.String",
+                "description": "Code of GLAccount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "GLAccountDescription",
+                "type": "Edm.String",
+                "description": "Description of GLAccount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "InvoiceNumber",
                 "type": "Edm.Int32",
                 "description": "Invoice number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Item",
+                "type": "Edm.Guid",
+                "description": "Reference to item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ItemCode",
+                "type": "Edm.String",
+                "description": "Code of Item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ItemDescription",
+                "type": "Edm.String",
+                "description": "Description of Item",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133075,6 +133821,20 @@
                 "mandatory": false
             },
             {
+                "name": "LineType",
+                "type": "Edm.Int16",
+                "description": "Line type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Modified",
                 "type": "Edm.DateTime",
                 "description": "Last modified date",
@@ -133106,6 +133866,34 @@
                 "name": "ModifierFullName",
                 "type": "Edm.String",
                 "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Extra remarks",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "OffsetID",
+                "type": "Edm.Guid",
+                "description": "OffsetID",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133173,6 +133961,20 @@
                 "mandatory": false
             },
             {
+                "name": "PaymentDiscountAmount",
+                "type": "Edm.Double",
+                "description": "Discount amount when paid in time",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "PaymentReference",
                 "type": "Edm.String",
                 "description": "The payment reference used for bank imports, VAT return and Tax reference",
@@ -133190,6 +133992,90 @@
                 "name": "ProcessNumber",
                 "type": "Edm.Int32",
                 "description": "Internal processing number, only relevant for Germany",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Project",
+                "type": "Edm.Guid",
+                "description": "Reference to project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectCode",
+                "type": "Edm.String",
+                "description": "Code of Project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectDescription",
+                "type": "Edm.String",
+                "description": "Description of Project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectWBS",
+                "type": "Edm.Guid",
+                "description": "Reference to Project WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectWBSDescription",
+                "type": "Edm.String",
+                "description": "Description of Project WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Quantity",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133257,6 +134143,20 @@
                 "mandatory": false
             },
             {
+                "name": "SerialNumber",
+                "type": "Edm.String",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Status",
                 "type": "Edm.Int16",
                 "description": "Status: 5 = Rejected, 20 = Open, 50 = Processed",
@@ -133285,6 +134185,34 @@
                 "mandatory": false
             },
             {
+                "name": "Subscription",
+                "type": "Edm.Guid",
+                "description": "Reference to subscription line (Note: LineNumber greater than 0 is subscription line)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "SubscriptionDescription",
+                "type": "Edm.String",
+                "description": "Description of subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Supplier",
                 "type": "Edm.Guid",
                 "description": "Reference to supplier (account)",
@@ -133302,6 +134230,34 @@
                 "name": "SupplierName",
                 "type": "Edm.String",
                 "description": "Name of supplier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "Edm.String",
+                "description": "Tracking number of item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "TrackingNumberDescription",
+                "type": "Edm.String",
+                "description": "Tracking number description",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133369,6 +134325,62 @@
                 "mandatory": false
             },
             {
+                "name": "VATCode",
+                "type": "Edm.String",
+                "description": "Vat code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATCodeDescription",
+                "type": "Edm.String",
+                "description": "Description of VATCode",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATPercentage",
+                "type": "Edm.Double",
+                "description": "Vat percentage",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATType",
+                "type": "Edm.String",
+                "description": "Vat type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "YourRef",
                 "type": "Edm.String",
                 "description": "Your reference",
@@ -133413,6 +134425,20 @@
                 "mandatory": false
             },
             {
+                "name": "AccountCode",
+                "type": "Edm.String",
+                "description": "Code of the Account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "AmountDC",
                 "type": "Edm.Double",
                 "description": "Amount in the default currency of the company. For the header lines (LineNumber = 0) of an entry this is the SUM(AmountDC) of all lines",
@@ -133441,9 +134467,135 @@
                 "mandatory": false
             },
             {
+                "name": "AmountVATBaseFC",
+                "type": "Edm.Double",
+                "description": "Vat base amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AmountVATFC",
+                "type": "Edm.Double",
+                "description": "Vat amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Asset",
+                "type": "Edm.Guid",
+                "description": "Reference to asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssetCode",
+                "type": "Edm.String",
+                "description": "Code of Asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "AssetDescription",
+                "type": "Edm.String",
+                "description": "Description of Asset",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "BatchNumber",
                 "type": "Edm.Int32",
                 "description": "The number of the batch of entries. Normally a batch consists of multiple entries. Batchnumbers are filled for invoices created by: - Fixed entries - Prolongation (only available with module hosting)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostCenter",
+                "type": "Edm.String",
+                "description": "Reference to cost center",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostCenterDescription",
+                "type": "Edm.String",
+                "description": "Description of CostCenter",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostUnit",
+                "type": "Edm.String",
+                "description": "Reference to cost unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CostUnitDescription",
+                "type": "Edm.String",
+                "description": "Description of CostUnit",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133679,6 +134831,20 @@
                 "mandatory": false
             },
             {
+                "name": "ExchangeRate",
+                "type": "Edm.Double",
+                "description": "Exchange rate",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "ExternalLinkDescription",
                 "type": "Edm.String",
                 "description": "Description of ExternalLink",
@@ -133707,9 +134873,121 @@
                 "mandatory": false
             },
             {
+                "name": "ExtraDutyAmountFC",
+                "type": "Edm.Double",
+                "description": "Extra duty amount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ExtraDutyPercentage",
+                "type": "Edm.Double",
+                "description": "Extra duty percentage",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FinancialPeriod",
+                "type": "Edm.Int16",
+                "description": "Financial period",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "FinancialYear",
+                "type": "Edm.Int16",
+                "description": "Financial year",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "GAccountAmountFC",
                 "type": "Edm.Double",
                 "description": "A positive value of the amount indicates that the amount is to be paid by the customer to your G bank account.In case of a credit invoice the amount should have negative value when retrieved or posted to Exact.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "GLAccount",
+                "type": "Edm.Guid",
+                "description": "General ledger account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "GLAccountCode",
+                "type": "Edm.String",
+                "description": "Code of GLAccount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "GLAccountDescription",
+                "type": "Edm.String",
+                "description": "Description of GLAccount",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133763,6 +135041,48 @@
                 "mandatory": false
             },
             {
+                "name": "Item",
+                "type": "Edm.Guid",
+                "description": "Reference to item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ItemCode",
+                "type": "Edm.String",
+                "description": "Code of Item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ItemDescription",
+                "type": "Edm.String",
+                "description": "Description of Item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Journal",
                 "type": "Edm.String",
                 "description": "The journal code. Every invoice should be linked to a sales journal",
@@ -133805,6 +135125,20 @@
                 "mandatory": false
             },
             {
+                "name": "LineType",
+                "type": "Edm.Int16",
+                "description": "Line type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Modified",
                 "type": "Edm.DateTime",
                 "description": "Last modified date",
@@ -133836,6 +135170,34 @@
                 "name": "ModifierFullName",
                 "type": "Edm.String",
                 "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Notes",
+                "type": "Edm.String",
+                "description": "Extra remarks",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "OffsetID",
+                "type": "Edm.Guid",
+                "description": "OffsetID",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133903,6 +135265,20 @@
                 "mandatory": false
             },
             {
+                "name": "PaymentDiscountAmount",
+                "type": "Edm.Double",
+                "description": "Discount amount when paid in time",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "PaymentReference",
                 "type": "Edm.String",
                 "description": "The payment reference used for bank imports, VAT return and Tax reference",
@@ -133920,6 +135296,90 @@
                 "name": "ProcessNumber",
                 "type": "Edm.Int32",
                 "description": "Internal processing number, only relevant for Germany",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Project",
+                "type": "Edm.Guid",
+                "description": "Reference to project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectCode",
+                "type": "Edm.String",
+                "description": "Code of Project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectDescription",
+                "type": "Edm.String",
+                "description": "Description of Project",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectWBS",
+                "type": "Edm.Guid",
+                "description": "Reference to Project WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectWBSDescription",
+                "type": "Edm.String",
+                "description": "Description of Project WBS",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Quantity",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -133987,6 +135447,20 @@
                 "mandatory": false
             },
             {
+                "name": "SerialNumber",
+                "type": "Edm.String",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Status",
                 "type": "Edm.Int16",
                 "description": "Status: 20 = Open, 50 = Processed",
@@ -134004,6 +135478,62 @@
                 "name": "StatusDescription",
                 "type": "Edm.String",
                 "description": "Description of Status",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Subscription",
+                "type": "Edm.Guid",
+                "description": "Reference to subscription line (Note: LineNumber greater than 0 is subscription line)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "SubscriptionDescription",
+                "type": "Edm.String",
+                "description": "Description of subscription line",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "Edm.String",
+                "description": "Tracking number of item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "TrackingNumberDescription",
+                "type": "Edm.String",
+                "description": "Tracking number description",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -134060,6 +135590,62 @@
                 "name": "VATAmountFC",
                 "type": "Edm.Double",
                 "description": "Vat amount in the currency of the transaction",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATCode",
+                "type": "Edm.String",
+                "description": "Vat code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATCodeDescription",
+                "type": "Edm.String",
+                "description": "Description of VATCode",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATPercentage",
+                "type": "Edm.Double",
+                "description": "Vat percentage",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "VATType",
+                "type": "Edm.String",
+                "description": "Vat type",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
