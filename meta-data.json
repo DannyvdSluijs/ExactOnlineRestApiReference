@@ -40061,7 +40061,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription, VATCode and PaymentCondition",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription and VATCode",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -40175,7 +40175,7 @@
             {
                 "name": "RefersTo",
                 "type": "Edm.String",
-                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription, VATCode and PaymentCondition",
+                "description": "The name of the referencing entity. The supported values are Item, Account, Project, Opportunity, SalesOrder, Contact, User, Employee, Document, Team, CostUnit, CostCenter, Journal, Quotation, PurchaseOrder, SalesInvoice, GLAccount, ShopOrder, Subscription and VATCode",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
