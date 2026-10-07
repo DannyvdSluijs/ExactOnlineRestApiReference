@@ -14463,6 +14463,20 @@
                 "mandatory": false
             },
             {
+                "name": "InvoiceNotes",
+                "type": "Edm.String",
+                "description": "Invoice notes",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "IsMarkAsPaidEditable",
                 "type": "Edm.Boolean",
                 "description": "Is MarkAsPaid editable",
@@ -16851,6 +16865,20 @@
                 "mandatory": false
             },
             {
+                "name": "BarEnd",
+                "type": "Edm.Double",
+                "description": "Bar end value for bar-based calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "BatchQuantity",
                 "type": "Edm.Double",
                 "description": "Batch quantity",
@@ -16862,6 +16890,188 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedArea",
+                "type": "Edm.String",
+                "description": "Calculated area unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedLength",
+                "type": "Edm.String",
+                "description": "Calculated length unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedVolume",
+                "type": "Edm.String",
+                "description": "Calculated volume unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWeight",
+                "type": "Edm.String",
+                "description": "Calculated weight unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeBars",
+                "type": "Edm.Byte",
+                "description": "Indicates whole bars setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeEaches",
+                "type": "Edm.Byte",
+                "description": "Indicates whole eaches setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerBar",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per bar setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerSheet",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per sheet setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeSheets",
+                "type": "Edm.Byte",
+                "description": "Indicates whole sheets setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorType",
+                "type": "Edm.Int16",
+                "description": "Shape\/material calculator type used in Manufacturing: 0=Fixed, 1=MaterialsPerPiece, 2=PiecesPerMaterial, 3=PiecesPerBar, 4=PiecesPerSheet, 5=LengthPerPiece, 6=WeightPerPiece, 7=VolumePerPiece, 8=Phantom, 9=PhantomZeroLeadTime",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorTypeDescription",
+                "type": "Edm.String",
+                "description": "Description of CalculatorType",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUnitFactorType",
+                "type": "Edm.Int32",
+                "description": "Conversion factor type between stock and shape unit: 1=1 stock unit = X shape units, 2=1 shape unit = X stock units",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUOM",
+                "type": "Edm.String",
+                "description": "Unit of measure code used for stock\/dimension ratio",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             },
             {
@@ -17120,6 +17330,20 @@
                 "name": "CustomField",
                 "type": "Edm.String",
                 "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Depth",
+                "type": "Edm.Double",
+                "description": "Depth of the shape item",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -18083,6 +18307,48 @@
                 "mandatory": false
             },
             {
+                "name": "Length",
+                "type": "Edm.Double",
+                "description": "Length of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Margin",
+                "type": "Edm.Double",
+                "description": "End\/margin scrap of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MeasurementUnit",
+                "type": "Edm.String",
+                "description": "Measurement unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Modified",
                 "type": "Edm.DateTime",
                 "description": "Last modified date",
@@ -18212,6 +18478,20 @@
                 "name": "PictureUrl",
                 "type": "Edm.String",
                 "description": "Url where picture can be retrieved",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Conversion factor between stock unit and shape unit",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -18430,6 +18710,62 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "Weight",
+                "type": "Edm.Double",
+                "description": "Weight per shape unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightPer",
+                "type": "Edm.String",
+                "description": "Weight per unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightUOM",
+                "type": "Edm.String",
+                "description": "Weight unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Width",
+                "type": "Edm.Double",
+                "description": "Width of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             }
         ],
@@ -41038,6 +41374,20 @@
                 "name": "InheritShare",
                 "type": "Edm.Boolean",
                 "description": "InheritShare value",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "InvoiceNotes",
+                "type": "Edm.String",
+                "description": "Invoice notes",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -66167,6 +66517,20 @@
                 "mandatory": false
             },
             {
+                "name": "BarEnd",
+                "type": "Edm.Double",
+                "description": "Bar end value for bar-based calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "BatchQuantity",
                 "type": "Edm.Double",
                 "description": "Batch quantity",
@@ -66178,6 +66542,188 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedArea",
+                "type": "Edm.String",
+                "description": "Calculated area unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedLength",
+                "type": "Edm.String",
+                "description": "Calculated length unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedVolume",
+                "type": "Edm.String",
+                "description": "Calculated volume unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWeight",
+                "type": "Edm.String",
+                "description": "Calculated weight unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeBars",
+                "type": "Edm.Byte",
+                "description": "Indicates whole bars setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeEaches",
+                "type": "Edm.Byte",
+                "description": "Indicates whole eaches setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerBar",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per bar setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerSheet",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per sheet setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeSheets",
+                "type": "Edm.Byte",
+                "description": "Indicates whole sheets setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorType",
+                "type": "Edm.Int16",
+                "description": "Shape\/material calculator type used in Manufacturing: 0=Fixed, 1=MaterialsPerPiece, 2=PiecesPerMaterial, 3=PiecesPerBar, 4=PiecesPerSheet, 5=LengthPerPiece, 6=WeightPerPiece, 7=VolumePerPiece, 8=Phantom, 9=PhantomZeroLeadTime",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorTypeDescription",
+                "type": "Edm.String",
+                "description": "Description of CalculatorType",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUnitFactorType",
+                "type": "Edm.Int32",
+                "description": "Conversion factor type between stock and shape unit: 1=1 stock unit = X shape units, 2=1 shape unit = X stock units",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUOM",
+                "type": "Edm.String",
+                "description": "Unit of measure code used for stock\/dimension ratio",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             },
             {
@@ -66436,6 +66982,20 @@
                 "name": "CustomField",
                 "type": "Edm.String",
                 "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Depth",
+                "type": "Edm.Double",
+                "description": "Depth of the shape item",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -67399,6 +67959,48 @@
                 "mandatory": false
             },
             {
+                "name": "Length",
+                "type": "Edm.Double",
+                "description": "Length of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Margin",
+                "type": "Edm.Double",
+                "description": "End\/margin scrap of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MeasurementUnit",
+                "type": "Edm.String",
+                "description": "Measurement unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Modified",
                 "type": "Edm.DateTime",
                 "description": "Last modified date",
@@ -67528,6 +68130,20 @@
                 "name": "PictureUrl",
                 "type": "Edm.String",
                 "description": "Url where picture can be retrieved",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Conversion factor between stock unit and shape unit",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -67746,6 +68362,62 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "Weight",
+                "type": "Edm.Double",
+                "description": "Weight per shape unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightPer",
+                "type": "Edm.String",
+                "description": "Weight per unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightUOM",
+                "type": "Edm.String",
+                "description": "Weight unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Width",
+                "type": "Edm.Double",
+                "description": "Width of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             }
         ],
@@ -106913,7 +107585,7 @@
                     "put": true,
                     "delete": false
                 },
-                "hidden": true,
+                "hidden": false,
                 "mandatory": false
             },
             {
@@ -106927,7 +107599,7 @@
                     "put": false,
                     "delete": false
                 },
-                "hidden": true,
+                "hidden": false,
                 "mandatory": false
             },
             {
@@ -107135,6 +107807,20 @@
                     "get": true,
                     "post": false,
                     "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ProjectRebillItem",
+                "type": "Edm.Guid",
+                "description": "Item used to rebill this purchase entry line. Only available with a professional service license",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": true,
+                    "put": true,
                     "delete": false
                 },
                 "hidden": false,
@@ -114273,7 +114959,7 @@
             {
                 "name": "Status",
                 "type": "Edm.String",
-                "description": "Status of the process invoicesalesorder background job.",
+                "description": "Status of the process invoicesalesorder background job. Status of the background job: 20 = Waiting, 30 = Busy, 50 = Finished, 40 = Technical Error, 52 = Functional error",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -114359,7 +115045,7 @@
             {
                 "name": "Errors",
                 "type": "Edm.String",
-                "description": "Errors in the process.(Result for Mode- 0)",
+                "description": "Obsolete",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -114401,7 +115087,7 @@
             {
                 "name": "Mode",
                 "type": "Edm.Int32",
-                "description": "Mode- 0:Sync(Default) 1:Async",
+                "description": "Obsolete",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -114415,7 +115101,7 @@
             {
                 "name": "NumberOfCreatedInvoices",
                 "type": "Edm.Int32",
-                "description": "Number of invoices successfully created.(Result for Mode- 0)",
+                "description": "Obsolete",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -114429,7 +115115,7 @@
             {
                 "name": "NumberOfFailedInvoices",
                 "type": "Edm.Int32",
-                "description": "Number of invoices failed to create.(Result for Mode- 0)",
+                "description": "Obsolete",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -128625,6 +129311,372 @@
         ],
         "deprecated": false
     },
+    "\/api\/v1\/{division}\/sync\/CRM\/BankAccounts": {
+        "endpoint": "CRM\/BankAccounts",
+        "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncCRMBankAccounts",
+        "scope": "Crm accounts",
+        "uri": "\/api\/v1\/{division}\/sync\/CRM\/BankAccounts",
+        "supportedMethods": {
+            "get": true,
+            "post": false,
+            "put": false,
+            "delete": false
+        },
+        "example": "\/api\/v1\/{division}\/sync\/CRM\/BankAccounts",
+        "properties": [
+            {
+                "name": "Timestamp",
+                "type": "Edm.Int64",
+                "description": "Timestamp",
+                "primaryKey": true,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Account",
+                "type": "Edm.Guid",
+                "description": "Account (customer, supplier) to which the bank account belongs",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            },
+            {
+                "name": "AccountName",
+                "type": "Edm.String",
+                "description": "The name of the account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Bank",
+                "type": "Edm.Guid",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BankAccount",
+                "type": "Edm.String",
+                "description": "The bank account number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": true
+            },
+            {
+                "name": "BankAccountHolderName",
+                "type": "Edm.String",
+                "description": "Name of the holder of the bank account, as known by the bank",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BankDescription",
+                "type": "Edm.String",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BankName",
+                "type": "Edm.String",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "BICCode",
+                "type": "Edm.String",
+                "description": "BIC code of the bank where the bank account is held",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Blocked",
+                "type": "Edm.Boolean",
+                "description": "Indicates if the bank account is blocked",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Created",
+                "type": "Edm.DateTime",
+                "description": "Creation date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Creator",
+                "type": "Edm.Guid",
+                "description": "User ID of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CreatorFullName",
+                "type": "Edm.String",
+                "description": "Name of creator",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Description",
+                "type": "Edm.String",
+                "description": "Description of the bank account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Division",
+                "type": "Edm.Int32",
+                "description": "Division code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Format",
+                "type": "Edm.String",
+                "description": "Format that belongs to the bank account number",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "IBAN",
+                "type": "Edm.String",
+                "description": "Obsolete",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ID",
+                "type": "Edm.Guid",
+                "description": "Primary key",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Main",
+                "type": "Edm.Boolean",
+                "description": "Indicates if the bank account is the main bank account",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modified",
+                "type": "Edm.DateTime",
+                "description": "Last modified date",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Modifier",
+                "type": "Edm.Guid",
+                "description": "User ID of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "ModifierFullName",
+                "type": "Edm.String",
+                "description": "Name of modifier",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "PaymentServiceAccount",
+                "type": "Edm.Guid",
+                "description": "ID of the Payment service account. Used when Type is 'P' (Payment service)",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Type",
+                "type": "Edm.String",
+                "description": "The type indicates what entity the bank account is used for. A = Account (default), E = Employee, K = Cash, P = Payment service, R = Bank, S = Student, U = Unknown. Currently it's only possible to create 'Account' type bank accounts.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "TypeDescription",
+                "type": "Edm.String",
+                "description": "Description of the Type",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            }
+        ],
+        "deprecated": false
+    },
     "\/api\/v1\/{division}\/sync\/CRM\/Contacts": {
         "endpoint": "CRM\/Contacts",
         "documentation": "https:\/\/start.exactonline.nl\/docs\/HlpRestAPIResourcesDetails.aspx?name=SyncCRMContacts",
@@ -131830,6 +132882,20 @@
                 "name": "InheritShare",
                 "type": "Edm.Boolean",
                 "description": "InheritShare value",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "InvoiceNotes",
+                "type": "Edm.String",
+                "description": "Invoice notes",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -141147,6 +142213,20 @@
                 "mandatory": false
             },
             {
+                "name": "BarEnd",
+                "type": "Edm.Double",
+                "description": "Bar end value for bar-based calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "BatchQuantity",
                 "type": "Edm.Double",
                 "description": "Batch quantity",
@@ -141158,6 +142238,188 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedArea",
+                "type": "Edm.String",
+                "description": "Calculated area unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedLength",
+                "type": "Edm.String",
+                "description": "Calculated length unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedVolume",
+                "type": "Edm.String",
+                "description": "Calculated volume unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWeight",
+                "type": "Edm.String",
+                "description": "Calculated weight unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeBars",
+                "type": "Edm.Byte",
+                "description": "Indicates whole bars setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeEaches",
+                "type": "Edm.Byte",
+                "description": "Indicates whole eaches setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerBar",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per bar setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholePiecesPerSheet",
+                "type": "Edm.Byte",
+                "description": "Indicates whole pieces per sheet setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatedWholeSheets",
+                "type": "Edm.Byte",
+                "description": "Indicates whole sheets setting for applicable shape calculator types",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorType",
+                "type": "Edm.Int16",
+                "description": "Shape\/material calculator type used in Manufacturing: 0=Fixed, 1=MaterialsPerPiece, 2=PiecesPerMaterial, 3=PiecesPerBar, 4=PiecesPerSheet, 5=LengthPerPiece, 6=WeightPerPiece, 7=VolumePerPiece, 8=Phantom, 9=PhantomZeroLeadTime",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorTypeDescription",
+                "type": "Edm.String",
+                "description": "Description of CalculatorType",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUnitFactorType",
+                "type": "Edm.Int32",
+                "description": "Conversion factor type between stock and shape unit: 1=1 stock unit = X shape units, 2=1 shape unit = X stock units",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "CalculatorUOM",
+                "type": "Edm.String",
+                "description": "Unit of measure code used for stock\/dimension ratio",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             },
             {
@@ -141416,6 +142678,20 @@
                 "name": "CustomField",
                 "type": "Edm.String",
                 "description": "Custom field endpoint. Provided only for the Exact Online Premium users.",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Depth",
+                "type": "Edm.Double",
+                "description": "Depth of the shape item",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -142365,6 +143641,48 @@
                 "mandatory": false
             },
             {
+                "name": "Length",
+                "type": "Edm.Double",
+                "description": "Length of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Margin",
+                "type": "Edm.Double",
+                "description": "End\/margin scrap of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "MeasurementUnit",
+                "type": "Edm.String",
+                "description": "Measurement unit code mapped from the active shape",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
                 "name": "Modified",
                 "type": "Edm.DateTime",
                 "description": "Last modified date",
@@ -142494,6 +143812,20 @@
                 "name": "PictureUrl",
                 "type": "Edm.String",
                 "description": "Url where picture can be retrieved",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Quantity",
+                "type": "Edm.Double",
+                "description": "Conversion factor between stock unit and shape unit",
                 "primaryKey": false,
                 "supportedMethods": {
                     "get": true,
@@ -142698,6 +144030,62 @@
                     "delete": false
                 },
                 "hidden": true,
+                "mandatory": false
+            },
+            {
+                "name": "Weight",
+                "type": "Edm.Double",
+                "description": "Weight per shape unit",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightPer",
+                "type": "Edm.String",
+                "description": "Weight per unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "WeightUOM",
+                "type": "Edm.String",
+                "description": "Weight unit code",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
+                "mandatory": false
+            },
+            {
+                "name": "Width",
+                "type": "Edm.Double",
+                "description": "Width of the shape item",
+                "primaryKey": false,
+                "supportedMethods": {
+                    "get": true,
+                    "post": false,
+                    "put": false,
+                    "delete": false
+                },
+                "hidden": false,
                 "mandatory": false
             }
         ],
